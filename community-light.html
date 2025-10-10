@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASAP HK: Community Events & Schedule</title>
+    <meta name="description" content="Join the ASAP community for monthly contrast therapy events, workshops, and social plunges in Central, Hong Kong.">
+    <link rel="canonical" href="https://www.comeasap.com/community.html">
+    <meta property="og:title" content="ASAP HK: Community Events">
+    <meta property="og:url" content="https://www.comeasap.com/community.html">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;700&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --infrared-orange: #EF4723;
+            --bright-orange: #FE5101;
+            --soft-yellow: #FFD700;
+            --light-bg: #FFFEFB;
+            --dark-text: #010101;
+            --dark-gray-text: #909090;
+            --dark-bg: var(--light-bg);      /* Main background becomes light gray */
+            --text-light: var(--dark-text);  /* Main text becomes dark */
+            --text-gray: var(--dark-gray-text); /* Gray text becomes darker */
+            --accent-blue: #A0DDF8;
+
+            --primary-font: 'Inter', sans-serif;
+            --secondary-font: 'EB Garamond', serif;
+            --section-padding: 4rem 10%;
+            --line-height: 10px;
+            --line-width: 50%;
+        }
+
+        body {
+            margin: 0;
+            font-family: var(--primary-font);
+            color: var(--text-light); /* Now dark text */
+            font-size: clamp(1rem, 0.5vw + 1rem, 1.125rem); 
+            letter-spacing: -0.03em;
+            line-height: 1.2;
+            background-color: var(--dark-bg); /* Now light background */
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--secondary-font);
+            font-weight: 700;
+            letter-spacing: -0.085em;
+            line-height: 0.8;
+            margin: 0;
+        }
+
+        h2 { font-size: clamp(2.5rem, 5vw, 64px); margin-bottom: 3rem; } 
+        p { margin: 0.5rem 0; }
+
+        .section {
+            padding: var(--section-padding);
+            box-sizing: border-box;
+            position: relative;
+        }
+        
+        .section-line {
+            width: var(--line-width);
+            max-width: 250px;
+            height: var(--line-height);
+            margin-bottom: 3rem;
+            background-color: var(--infrared-orange);
+        }
+
+        .header {
+            position: fixed;
+            top: 2rem;
+            right: 10%;
+            z-index: 10;
+            transition: color 0.3s ease;
+        }
+
+        .header a {
+            font-family: var(--primary-font);
+            font-size: 1rem; 
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            text-decoration: none;
+            color: var(--text-light); /* Header links are now dark */
+            margin-left: 2rem;
+            text-transform: uppercase; 
+        }
+
+        .btn-booking {
+            display: inline-block; 
+            background-color: var(--infrared-orange);
+            color: var(--dark-bg); /* Light color on button */
+            text-decoration: none;
+            padding: 10px 20px; 
+            font-family: var(--primary-font);
+            font-size: clamp(0.9rem, 0.5vw + 0.9rem, 1rem); 
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            line-height: 1.2;
+            border-radius: 50px;
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .btn-booking:hover { 
+            background-color: var(--accent-blue); /* Changed hover color for contrast */
+            color: var(--dark-bg);
+            transform: translateY(-2px); 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+        }
+
+        /* --- Community Section Specific Styles --- */
+        .community-hero {
+            background-color: var(--dark-bg); /* Now light background */
+            color: var(--text-light); /* Now dark text */
+            padding-top: 10rem;
+        }
+
+        .community-event-item {
+            border-bottom: 1px solid var(--text-light); /* Dark line */
+            padding: 1.5rem 0;
+        }
+
+        .event-question {
+            /* Inherits text-light (dark) color */
+            background: none;
+            border: none;
+            color: inherit;
+            font-family: inherit;
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            width: 100%;
+            padding: 0;
+            cursor: pointer;
+            outline: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .event-details {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+            flex-grow: 1;
+        }
+        .event-question p {
+             /* Resetting margin for the main text block */
+            margin: 0; 
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+        }
+        .event-question p span { 
+            font-weight: bold; 
+            margin-right: 1rem; 
+        }
+        .event-details strong {
+            font-family: var(--primary-font);
+            font-weight: 700;
+            font-size: 1.2em;
+            letter-spacing: -0.03em;
+            margin-bottom: 0.25rem;
+        }
+        .event-question .event-time { 
+            font-size: 0.9em; 
+            color: var(--text-gray); /* Darker gray for time */
+            font-weight: 400; 
+            margin-left: 0.5rem;
+        }
+
+        .toggle-and-join {
+            display: flex;
+            align-items: center;
+            margin-left: 1rem;
+        }
+
+        .event-toggle::after { 
+            content: '+'; 
+            font-size: 1.5rem; 
+            transition: transform 0.3s ease; 
+            margin-left: 1rem;
+        }
+        .event-toggle[data-expanded="true"]::after { 
+            content: '-'; 
+        }
+
+        .event-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            font-size: inherit; 
+            line-height: 1.4;
+            letter-spacing: 0;
+            display: flex;
+            flex-direction: column;
+            color: var(--text-light); /* Ensure answer text is still dark */
+        }
+        
+        .event-answer[data-expanded="true"] { 
+            padding-top: 1rem; 
+        }
+
+        .event-answer .btn-booking {
+            display: inline-block;
+            margin-top: 1rem;
+            align-self: flex-start;
+            padding: 10px 25px;
+        }
+
+        /* Footer styling */
+        footer { 
+            background-color: var(--dark-bg); /* Now light background */
+            color: var(--text-light); /* Now dark text */
+            text-align: center; 
+            padding: 1rem 0; 
+            display: flex; 
+            flex-direction: column; 
+            align-items: center; 
+        }
+        .footer-logo-actual {
+            filter: none; /* assuming logo is dark, so no filter is needed on a light background */
+            width: 40px;
+            height: 40px;
+            margin-bottom: 1rem;
+        }
+
+        footer p {
+            font-size: 0.6rem; 
+            font-family: var(--primary-font);
+            font-weight: 700;
+            font-style: italic;
+            letter-spacing: -0.08em;
+            line-height: 1.2;
+            opacity: 1;
+            color: var(--text-gray);
+            margin: 0;
+        }
+
+
+        @media (max-width: 768px) {
+            :root {
+                --section-padding: 4rem 5%;
+            }
+            .section { padding: var(--section-padding); }
+            .header { right: 50%; transform: translateX(50%); top: 1rem; }
+            .header a { margin: 0 0.5rem; }
+
+            .community-hero { padding-top: 6rem; }
+
+            /* Community Event mobile adjustments */
+            .event-question {
+                flex-wrap: wrap; 
+                align-items: flex-start;
+            }
+            .event-question p {
+                width: 100%; 
+                margin-bottom: 0.5rem;
+            }
+            .event-details {
+                width: 100%;
+            }
+            .toggle-and-join {
+                width: 100%;
+                justify-content: space-between;
+                margin-left: 0;
+            }
+            .event-toggle::after {
+                order: -1; 
+                margin-left: 0;
+            }
+            .event-answer .btn-booking {
+                align-self: center; 
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <nav>
+            <a href="index.html#experience">Experience.</a>
+            <a href="index.html#pricing">Pricing.</a>
+            <a href="community.html">Community.</a> 
+            <a href="index.html#faq">Faq.</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="section community-hero">
+            <div class="section-line"></div>
+            <h2>Community Events</h2>
+            <p style="margin-bottom: 3rem;">Connect with fellow contrast enthusiasts. Limited spots are available for our monthly workshops, meet-ups, and specialty sessions.</p>
+            
+            <div class="community-event-item">
+                <button class="event-question event-toggle" data-expanded="false">
+                    <div class="event-details">
+                        <p><span>October 15</span> <strong>Sunrise Plunge & Coffee</strong> <span class="event-time">6:00 AM - 7:30 AM</span></p>
+                    </div>
+                    <div class="toggle-and-join">
+                        <a href="#" class="btn-booking btn-join">Join</a>
+                    </div>
+                </button>
+                <div class="event-answer">
+                    <p>Start your week right! Join us for an invigorating morning contrast session, followed by artisanal coffee and a brief chat on breathwork and cold exposure. Limited spots available for members and day pass holders.</p>
+                </div>
+            </div>
+
+            <div class="community-event-item">
+                <button class="event-question event-toggle" data-expanded="false">
+                    <div class="event-details">
+                        <p><span>October 22</span> <strong>Sauna & Stretch Workshop</strong> <span class="event-time">7:00 PM - 8:30 PM</span></p>
+                    </div>
+                    <div class="toggle-and-join">
+                        <a href="#" class="btn-booking btn-join">Join</a>
+                    </div>
+                </button>
+                <div class="event-answer">
+                    <p>A guided, high-heat sauna session focused on deep tissue mobility and static stretching, followed by a light cold plunge to lock in recovery. Workshop led by a certified yoga instructor. Booking essential.</p>
+                </div>
+            </div>
+
+            <div class="community-event-item">
+                <button class="event-question event-toggle" data-expanded="false">
+                    <div class="event-details">
+                        <p><span>October 29</span> <strong>Contrast & Networking</strong> <span class="event-time">5:30 PM - 7:00 PM</span></p>
+                    </div>
+                    <div class="toggle-and-join">
+                        <a href="#" class="btn-booking btn-join">Join</a>
+                    </div>
+                </button>
+                <div class="event-answer">
+                    <p>A social evening designed for our members and guests to connect, recover, and unwind. Enjoy a relaxed contrast session, followed by light refreshments and casual networking in our lounge. First drink is on us.</p>
+                </div>
+            </div>
+
+            <div class="community-event-item">
+                <button class="event-question event-toggle" data-expanded="false">
+                    <div class="event-details">
+                        <p><span>November 5</span> <strong>Breathwork Foundations</strong> <span class="event-time">8:00 AM - 9:30 AM</span></p>
+                    </div>
+                    <div class="toggle-and-join">
+                        <a href="#" class="btn-booking btn-join">Join</a>
+                    </div>
+                </button>
+                <div class="event-answer">
+                    <p>An introductory session to controlled hyperventilation and retention techniques to maximize your cold plunge benefits. This is a dry workshop, but your admission includes a post-session plunge pass.</p>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+    <footer>
+        <img src="images/asap_logo_footer.svg" alt="ASAP HK Logo" class="footer-logo-actual">
+        <p>©2025 ASAP HK. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // --- Accordion logic for Community Events ---
+            const eventButtons = document.querySelectorAll('.event-toggle');
+            
+            eventButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const answer = button.nextElementSibling;
+                    const expanded = button.getAttribute('data-expanded') === 'true';
+
+                    // Close all other open event items
+                    eventButtons.forEach(otherButton => {
+                        if (otherButton !== button) {
+                            otherButton.setAttribute('data-expanded', 'false');
+                            const otherAnswer = otherButton.nextElementSibling;
+                            otherAnswer.setAttribute('data-expanded', 'false'); 
+                            otherAnswer.style.maxHeight = "0";
+                        }
+                    });
+
+                    // Toggle the current item
+                    button.setAttribute('data-expanded', !expanded);
+                    answer.setAttribute('data-expanded', !expanded); 
+                    
+                    if (answer.getAttribute('data-expanded') === 'true') {
+                        // Set max-height dynamically for a smooth open transition
+                        // Adding a buffer (e.g., 40px) to ensure the padding and button fit
+                        answer.style.maxHeight = answer.scrollHeight + 40 + "px"; 
+                    } else {
+                        answer.style.maxHeight = "0";
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
