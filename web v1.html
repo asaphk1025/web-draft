@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASAP HK: Contrast Therapy, Sauna & Cold Plunge in Central, Hong Kong</title>
+    <meta name="description" content="Experience hot and cold immersion for better sleep, faster recovery, and sharper focus in Central, Hong Kong.">
+    <link rel="canonical" href="https://www.comeasap.com">
+    <meta property="og:title" content="ASAP HK: Contrast Therapy & Cold Plunge in Central">
+    <meta property="og:url" content="https://www.comeasap.com">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --infrared-orange: #EF4723;
+            --bright-orange: #FE5101;
+            --soft-yellow: #FFD700;
+            --dark-bg: #010101;
+            --text-light: #FFFEFB;
+            --text-gray: #909090;
+            --accent-blue: #A0DDF8;
+            --accent-green: #DDF0B5;
+            --primary-font: 'Inter', sans-serif;
+            --secondary-font: 'EB Garamond', serif;
+            --section-padding: 4rem 10%;
+            --line-height: 10px;
+            --line-width: 50%;
+            --clip-height: 8.6em;
+            
+            --spacing-85: -0.085em;
+            --spacing-30: -0.03em;
+            --line-height-08: 0.8;
+        }
+
+        body {
+            margin: 0;
+            font-family: var(--primary-font);
+            color: var(--text-light);
+            font-size: 16px;
+            letter-spacing: var(--spacing-30);
+            line-height: var(--line-height-08);
+            background-color: var(--infrared-orange);
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3 {
+            font-weight: 700;
+            letter-spacing: var(--spacing-85);
+            line-height: var(--line-height-08);
+            margin: 0;
+        }
+
+        h1 {
+            font-family: var(--secondary-font);
+            font-weight: 700;
+            font-size: clamp(2.8rem, 10vw, 88px);
+        }
+
+        h2 {
+            font-family: var(--secondary-font);
+            font-weight: 400;
+            font-size: clamp(2.5rem, 5vw, 50px);
+            margin-bottom: 3rem;
+        }
+
+        h3 {
+            font-family: var(--primary-font);
+            font-weight: 700;
+            font-size: clamp(1.5rem, 3vw, 30px);
+        }
+        
+        p {
+            margin: 0.5rem 0;
+            line-height: 1.2;
+        }
+
+        .section {
+            padding: var(--section-padding);
+            box-sizing: border-box;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .section-line {
+            width: var(--line-width);
+            max-width: 250px;
+            height: var(--line-height);
+            margin-bottom: 3rem;
+            background-color: var(--dark-bg);
+        }
+        
+        .section-line--blue { background-color: var(--accent-blue); }
+        .section-line--red { background-color: var(--infrared-orange); }
+
+        .underline-heat { text-decoration: underline; text-decoration-color: var(--infrared-orange); text-underline-offset: 4px; }
+        .underline-cold { text-decoration: underline; text-decoration-color: var(--accent-blue); text-underline-offset: 4px; }
+
+        .header {
+            position: fixed;
+            top: 2rem;
+            right: 10%;
+            z-index: 10;
+            transition: color 0.3s ease;
+        }
+
+        .header.dark-bg a { color: var(--dark-bg); }
+        .header a {
+            font-family: var(--primary-font);
+            font-size: 15px;
+            font-weight: 700;
+            letter-spacing: var(--spacing-30);
+            line-height: var(--line-height-08);
+            text-decoration: none;
+            color: var(--text-light);
+            margin-left: 2rem;
+            text-transform: uppercase;
+        }
+
+        .btn-container {
+            margin-top: 1.5rem;
+            width: auto;
+        }
+        .btn-booking {
+            display: inline-block;
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            text-decoration: none;
+            padding: 10px 20px;
+            font-family: var(--primary-font);
+            font-size: 14px;
+            font-weight: 700;
+            letter-spacing: var(--spacing-30);
+            line-height: 1.2;
+            border-radius: 50px;
+            text-align: center;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+            border: 2px solid transparent;
+        }
+
+        .btn-booking:hover {
+            background-color: var(--infrared-orange);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero-section {
+            height: 100vh;
+            display: grid;
+            place-items: center;
+            overflow: hidden;
+            color: var(--text-light);
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                135deg,
+                var(--infrared-orange) 0%,
+                var(--bright-orange) 20%,
+                var(--soft-yellow) 50%,
+                var(--bright-orange) 80%,
+                var(--infrared-orange) 100%
+            );
+            background-size: 200% 200%;
+            animation: blurred-gradient-animation 25s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+            filter: blur(80px);
+            z-index: 0;
+        }
+
+        @keyframes blurred-gradient-animation {
+            0% { transform: rotate(0deg) translate(0%, 0%); }
+            25% { transform: rotate(90deg) translate(15%, -15%); }
+            50% { transform: rotate(180deg) translate(25%, 25%); }
+            75% { transform: rotate(270deg) translate(-15%, 15%); }
+            100% { transform: rotate(360deg) translate(0%, 0%); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .hero-logo-actual {
+            width: 70px;
+            height: 70px;
+            margin-top: 2rem;
+        }
+
+        .hero-slogan {
+            position: absolute;
+            bottom: 2rem;
+            align-items: center;
+        }
+
+        .hero-slogan p {
+            font-family: var(--primary-font);
+            font-weight: 400;
+            font-size: 12px;
+            letter-spacing: var(--spacing-30);
+            line-height: var(--line-height-08);
+            margin: 0;
+        }
+
+        .hero-content .btn-container {
+            margin-top: 2rem;
+            width: auto;
+        }
+        .hero-content .btn-booking {
+            font-size: 16px;
+            padding: 15px 30px;
+            display: inline-block;
+
+            background-color: transparent;
+            color: var(--text-light);
+            border: 2px solid var(--text-light);
+        }
+        
+        .hero-content .btn-booking:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            border-color: var(--text-light);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .static-text-section {
+            background-color: var(--text-light);
+            padding: 2rem 0;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            overflow-x: hidden;
+        }
+
+        .static-text-section p {
+            color: var(--text-gray);
+            font-family: var(--secondary-font);
+            font-size: clamp(1rem, 3vw, 60px);
+            font-weight: 400;
+            line-height: 1.2;
+            letter-spacing: 0;
+            
+            width: 100%;
+            height: var(--clip-height);
+            overflow: hidden;
+            position: relative;
+            margin: 0;
+        }
+
+        #text-wrapper {
+            display: inline-block;
+            white-space: nowrap;
+            width: 120%;
+            position: relative;
+            left: 45%;
+            transform: translateX(-50%);
+            text-align: center;
+            font-weight: 400;
+        }
+
+        .highlight {
+            color: var(--infrared-orange);
+            font-weight: 400;
+        }
+
+        .section-1 {
+            background-color: var(--text-light);
+            color: var(--dark-bg);
+        }
+        .section-1-content {
+            max-width: 600px;
+            margin-left: 0;
+        }
+
+        .section-1-content p {
+            text-align: justify;
+        }
+
+        .experience {
+            background-color: var(--dark-bg);
+        }
+
+        .experience .experience-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: stretch;
+            margin-top: 3rem;
+        }
+
+        .experience-block {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .experience-block .experience-content {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            justify-content: flex-start;
+        }
+
+        .experience-block img {
+            width: 100%;
+            height: 400px;
+            display: block;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+        }
+
+        .experience-block h3 {
+            text-underline-offset: 8px;
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+
+        .pricing {
+            background-color: var(--text-light);
+            color: var(--dark-bg);
+        }
+
+        .pricing h3 {
+            font-size: clamp(1.2rem, 2.5vw, 30px);
+            margin-top: 0;
+            margin-bottom: 1rem;
+        }
+
+        .pricing .price-head { color: var(--dark-bg); }
+        .pricing .price-subhead { color: var(--accent-blue); }
+
+        .price-grid-top {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+        .price-option {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .price-info { flex-grow: 1; }
+        .price-info p {
+            font-family: var(--primary-font);
+            font-weight: 400;
+            font-size: inherit;
+            letter-spacing: var(--spacing-30);
+            line-height: 1.2;
+            margin: 0.5rem 0;
+        }
+
+        .price-tag-container {
+            display: flex;
+            align-items: flex-end;
+            height: 30px;
+            margin-top: 1rem;
+        }
+        .price-tag {
+            font-family: var(--primary-font);
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: var(--spacing-30);
+            line-height: 1.2;
+        }
+        .strikethrough { text-decoration: line-through; opacity: 0.5; }
+        .price-grid-bottom { display: grid; grid-template-columns: 1fr; }
+        .price-grid-bottom h3 { color: var(--infrared-orange); }
+
+        .faq-section { background-color: var(--dark-bg); }
+        .faq-item {
+            border-bottom: 1px solid var(--text-light);
+            padding: 1.5rem 0;
+        }
+
+        .faq-question {
+            background: none;
+            border: none;
+            color: inherit;
+            font-family: inherit;
+            font-size: 16px;
+            width: 100%;
+            padding: 0;
+            cursor: pointer;
+            outline: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .faq-question p {
+            margin: 0;
+            font-size: inherit;
+            text-align: left;
+            display: flex;
+            align-items: center;
+            letter-spacing: var(--spacing-30);
+        }
+        .faq-question p span { font-weight: bold; margin-right: 1rem; }
+        .faq-question::after { content: '+'; font-size: 1.5rem; transition: transform 0.3s ease; }
+        .faq-question[data-expanded="true"]::after { content: '-'; }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            font-size: 16px;
+            line-height: 1.4;
+            letter-spacing: 0;
+        }
+
+        .faq-answer[data-expanded="true"] {
+            padding-top: 1rem;
+        }
+
+        .section-4 { background-color: var(--dark-bg); text-align: center; padding-bottom: 2rem;}
+        footer { background-color: var(--dark-bg); text-align: center; padding: 1rem 0; display: flex; flex-direction: column; align-items: center; }
+        .footer-logo-actual {
+            width: 40px;
+            height: 40px;
+            margin-bottom: 1rem;
+        }
+
+        footer p {
+            font-size: 10px;
+            font-family: var(--primary-font);
+            font-weight: 700;
+            font-style: italic;
+            letter-spacing: -0.08em;
+            line-height: var(--line-height-08);
+            opacity: 0.6;
+            margin: 0;
+        }
+
+
+        @media (max-width: 768px) {
+            :root {
+                --section-padding: 4rem 5%;
+            }
+            
+            .section, .section-1 { padding: var(--section-padding); }
+            .section-1-content { max-width: 100%; margin: 0 auto; }
+            .section-line { margin: 0; margin-bottom: 3rem; }
+            
+            .header { right: 50%; transform: translateX(50%); top: 1rem; }
+            .header a { margin: 0 0.5rem; }
+
+            .experience .experience-grid {
+                grid-template-columns: 1fr;
+                gap: 4rem;
+                margin-top: 2rem;
+            }
+            
+            .experience-block img {
+                height: 300px;
+            }
+            
+            .price-grid-top {
+                grid-template-columns: 1fr;
+                gap: 4rem;
+            }
+            
+            .hero-slogan { flex-direction: column; bottom: 1rem; align-items: center; }
+            .hero-slogan p { margin: 0.5rem 0; }
+            
+            .hero-content {
+                padding-bottom: 100px;
+            }
+            .hero-content .hero-logo-actual {
+                width: 100px;
+                height: 100px;
+                margin-top: 2rem;
+            }
+            
+            .price-option .btn-container {
+                width: 100%;
+                max-width: 300px;
+                margin-left: 0;
+                margin-right: auto;
+            }
+
+            .hero-content .btn-container {
+                width: 100%;
+                max-width: 300px;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .hero-content .btn-booking,
+            .price-option .btn-booking {
+                padding: 15px;
+                display: block;
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <nav>
+            <a href="#experience">Experience.</a>
+            <a href="#pricing">Pricing.</a>
+            <a href="community-light.html">Community.</a>
+            <a href="#faq">Faq.</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="hero-section">
+            <div class="hero-content">
+                <h1>Alternate<br>Sauna<br>And<br>Plunge</h1>
+                <img src="images/asap_logo_primary.svg" alt="ASAP HK Logo" class="hero-logo-actual">
+                <div class="btn-container">
+                    <a href="https://forms.gle/Co999hu58XSMBV5dA?src=webhero" target="_blank" class="btn-booking">Get Early Access</a>
+                </div>
+            </div>
+            <div class="hero-slogan">
+                <p>11 STANLEY STREET, CENTRAL, HONG KONG</p>
+            </div>
+        </div>
+        
+        <div class="static-text-section">
+            <p>
+                <span id="text-wrapper">
+                    Stressed? Fatigued? Hungover? Heartbroken? Depleted? Poor sleep? Brain fog? Tired? Anxious? Torn? Blue? Burdened? Lack of agency?<br>
+                    Weary? Uninterested? Off? Sore? Bored? Exhausted? Frazzled? Sluggish? Overwhelmed? Dejected? Down? Vapid? Bleak? Debilitated?<br>
+                    Misunderstood? Stalled? Dispirited? Uninspired? Gloomy? Restless? Heavy? Drained? Groggy? Foggy? Unsettled? Enervated? Knocked out?<br>
+                    Inmobile? Numb? Burned out? Emo? Melancholic? Fidgety? Isolated? <span class="highlight"> Come ASAP.</span> Lifeless? Droopy? Blah? Stressed? Wistful?<br>
+                    Out-of-whack? Overstimulated? Lethargic? Scattered? Low dopamine? Dazed? Apathetic? Sapped? Off-balance? Wearisome? Depressed?<br>
+                    Listless? Gutted? Stagnant? Fraught? Lonesome? Distracted? Spent? Lonely? Sad? Jaded? Muddled? Rundown? Zapped? Mournful?<br>
+                    Disinterested? Blocked? Lost? Disoriented? Uneasy? Blue? Frustrated? Stalled? Meh? Forlorn? Sorrowful? Discouraged? Unmotivated? Timid?
+                </span>
+            </p>
+        </div>
+        
+        <div class="section section-1">
+            <div class="section-line section-line--red"></div>
+            <div class="section-1-content">
+                <h2>Come ASAP</h2>
+                <p>ASAP is where urbanites collide in the heart of Central to get momentum, forge habits, and feel invincible every day.</p>
+                <p>The science is clear: hot and cold immersion offers clearer headspace, deeper sleep, faster recovery, and lower all-cause mortality.</p>
+            </div>
+        </div>
+        
+        <div class="section experience" id="experience">
+            <div class="section-line section-line--blue"></div>
+            <h2>Experience<br>Contrast Therapy</h2>
+            
+            <div class="experience-grid">
+                
+                <div class="experience-block">
+                    <img src="images/sauna_experience.jpeg" alt="A person in a sauna, feeling the heat." loading="lazy">
+                    <div class="experience-content">
+                        <h3>In the <span class="underline-heat">Heat</span></h3>
+                        <p>It’s hot and only gets hotter. The temperature creeps higher as the sweat drips and toxins flush away. Between fight-or-flight, you gradually surrender to the heat. Your blood vessels dilate, improving circulation. Endorphins are released, whilst the tension you hold melt away.</p>
+                    </div>
+                </div>
+                
+                <div class="experience-block">
+                    <img src="images/cold_plunge_experience.jpeg" alt="A person in a cold plunge pool." loading="lazy">
+                    <div class="experience-content">
+                        <h3>In the <span class="underline-cold">Cold</span></h3>
+                        <p>It’s always colder than you remember. The air leaves your lungs as you plunge in. Your nervous system resets. Adrenaline, a big get, muscles tense, and then a jolt to the jaw. With each start, your focus sharpens and breathing steadies. Endorphins and dopamine surge. Now you’re in control.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section pricing" id="pricing">
+            <div class="section-line section-line--red"></div>
+            <h2>Come Once</h2>
+            <div class="price-grid-top">
+                <div class="price-option">
+                    <div class="price-info">
+                        <h3><span class="price-head">Day Pass</span></h3>
+                        <p>Access the facilities with no time limit and no re-entry. Perfect for those with commitment issues.</p>
+                        <p>Towels and optional swimwear provided.</p>
+                        <div class="price-tag-container">
+                            <p class="price-tag"><span><strong>$380</strong></span> <span class="strikethrough">$420</span></p>
+                        </div>
+                    </div>
+                    <div class="btn-container">
+                        <a href="#" class="btn-booking">Book Now</a>
+                    </div>
+                </div>
+                <div class="price-option">
+                    <div class="price-info">
+                        <h3><span class="price-subhead">Ice Breaker</span> <span class="price-head">Offer</span></h3>
+                        <p>Introductory offer for first time visitors. Drop in to try it for yourself.</p>
+                        <div class="price-tag-container">
+                            <p class="price-tag"><strong>$299</strong></p>
+                        </div>
+                    </div>
+                    <div class="btn-container">
+                        <a href="#" class="btn-booking">Book Now</a>
+                    </div>
+                </div>
+            </div>
+
+            <h2>Come Often</h2>
+            <div class="price-grid-bottom">
+                <div class="price-option">
+                    <div class="price-info">
+                        <h3>Membership</h3>
+                        <p>Unlimited sessions and priority access.<br>Exclusively for the dedicated.</p>
+                        <p>Invite only.</p>
+                    </div>
+                    <div class="btn-container">
+                        <a href="#" class="btn-booking">Express Interest</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section faq-section" id="faq">
+            <div class="section-line section-line--blue"></div>
+            <h2>FAQ</h2>
+            <div class="faq-item">
+                <button class="faq-question" data-expanded="false">
+                    <p><span>01</span> When are you open?</p>
+                </button>
+                <div class="faq-answer">
+                    <p>7am–10pm daily. Check our website for any changes. Some hours are reserved for quiet practice, others for social vibes.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" data-expanded="false">
+                    <p><span>02</span> Do I need to book?</p>
+                </button>
+                <div class="faq-answer">
+                    <p>No booking required. Drop in and dive right into the experience.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" data-expanded="false">
+                    <p><span>03</span> What should I bring?</p>
+                </button>
+                <div class="faq-answer">
+                    <p>Swimwear is a must. We provide towels, optional swim trunks (in case you're already on your way), and fluid replenishment. Bring an open mind.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" data-expanded="false">
+                    <p><span>04</span> Are phones or photos allowed?</p>
+                </button>
+                <div class="faq-answer">
+                    <p>Phones are permitted but keep them silent—-no calls, no sounds. Snap your own moments, but never photograph others without consent. Let’s keep the space intentional and present.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" data-expanded="false">
+                    <p><span>05</span> How do I prepare?</p>
+                </button>
+                <div class="faq-answer">
+                    <p>Skip heavy meals, hydrate well, and avoid oils, lotions, or perfumes to keep the water pure. Stay home if you’re unwell.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section section-4">
+            <h2>Coming ASAP</h2>
+            <p>11 Stanley Street,<br>Central, Hong Kong</p>
+        </div>
+    </main>
+
+    <footer>
+        <img src="images/asap_logo_footer.svg" alt="ASAP HK Logo" class="footer-logo-actual">
+        <p>©2025 ASAP HK. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            const header = document.querySelector('.header');
+            const pricingSection = document.getElementById('pricing');
+
+            function toggleHeaderColor() {
+                const scrollPosition = window.scrollY;
+                
+                if (!pricingSection) return;
+
+                const top = pricingSection.offsetTop;
+                const bottom = top + pricingSection.offsetHeight;
+
+                if (scrollPosition >= top - 100 && scrollPosition < bottom) {
+                    header.classList.add('dark-bg');
+                } else {
+                    header.classList.remove('dark-bg');
+                }
+            }
+
+            window.addEventListener('scroll', toggleHeaderColor);
+            toggleHeaderColor();
+
+            const faqButtons = document.querySelectorAll('.faq-question');
+            faqButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const expanded = button.getAttribute('data-expanded') === 'true';
+                    const answer = button.nextElementSibling;
+
+                    button.setAttribute('data-expanded', !expanded);
+                    answer.setAttribute('data-expanded', !expanded);
+                    
+                    if (answer.getAttribute('data-expanded') === 'true') {
+                        answer.style.maxHeight = answer.scrollHeight + 40 + "px";
+                    } else {
+                        answer.style.maxHeight = "0";
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
