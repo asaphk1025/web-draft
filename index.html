@@ -95,8 +95,8 @@
         .section-line--blue { background-color: var(--accent-blue); }
         .section-line--red { background-color: var(--infrared-orange); }
 
-        .underline-heat { text-decoration: underline; text-decoration-color: var(--infrared-orange); text-underline-offset: 4px; }
-        .underline-cold { text-decoration: underline; text-decoration-color: var(--accent-blue); text-underline-offset: 4px; }
+        .color-heat { color: var(--infrared-orange); }
+        .color-cold { color: var(--accent-blue); }
 
         .header {
             position: fixed;
@@ -457,7 +457,17 @@
             .section-1-content { max-width: 100%; margin: 0 auto; }
             .section-line { margin: 0; margin-bottom: 3rem; }
             
-            .header { right: 50%; transform: translateX(50%); top: 1rem; }
+            .header { 
+                right: 50%; 
+                transform: translateX(50%); 
+                top: 1rem; 
+                width: 100%; 
+                box-sizing: border-box;
+                padding: 0 5%;
+            }
+            .header nav {
+                text-align: center;
+            }
             .header a { margin: 0 0.5rem; }
 
             .experience .experience-grid {
@@ -497,8 +507,6 @@
             .hero-content .btn-container {
                 width: 100%;
                 max-width: 300px;
-                margin-left: auto;
-                margin-right: auto;
             }
 
             .hero-content .btn-booking,
@@ -567,7 +575,7 @@
                 <div class="experience-block">
                     <img src="images/sauna_experience.jpeg" alt="A person in a sauna, feeling the heat." loading="lazy">
                     <div class="experience-content">
-                        <h3>In the <span class="underline-heat">Heat</span></h3>
+                        <h3>In the <span class="color-heat">Heat</span></h3>
                         <p>It’s hot and only gets hotter. The temperature creeps higher as the sweat drips and toxins flush away. Between fight-or-flight, you gradually surrender to the heat. Your blood vessels dilate, improving circulation. Endorphins are released, whilst the tension you hold melt away.</p>
                     </div>
                 </div>
@@ -575,7 +583,7 @@
                 <div class="experience-block">
                     <img src="images/cold_plunge_experience.jpeg" alt="A person in a cold plunge pool." loading="lazy">
                     <div class="experience-content">
-                        <h3>In the <span class="underline-cold">Cold</span></h3>
+                        <h3>In the <span class="color-cold">Cold</span></h3>
                         <p>It’s always colder than you remember. The air leaves your lungs as you plunge in. Your nervous system resets. Adrenaline, a big get, muscles tense, and then a jolt to the jaw. With each start, your focus sharpens and breathing steadies. Endorphins and dopamine surge. Now you’re in control.</p>
                     </div>
                 </div>
