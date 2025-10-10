@@ -148,8 +148,11 @@
 
         .hero-section {
             height: 100vh;
-            display: grid;
-            place-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
             overflow: hidden;
             color: var(--text-light);
             position: relative;
@@ -192,13 +195,14 @@
             display: flex;
             flex-direction: column;
             justify-content: center;
-            align-items: center;
+            margin-bottom: 2rem; 
         }
 
         .hero-logo-actual {
             width: 70px;
             height: 70px;
-            margin-top: 2rem;
+            margin: 2rem auto;
+            display: block;
         }
 
         .hero-slogan {
@@ -215,12 +219,14 @@
             line-height: var(--line-height-08);
             margin: 0;
         }
-
-        .hero-content .btn-container {
-            margin-top: 2rem;
-            width: auto;
+        
+        .hero-btn-new-position {
+            position: relative;
+            z-index: 2;
+            margin: 0 auto 2rem auto;
         }
-        .hero-content .btn-booking {
+
+        .hero-btn-new-position .btn-booking {
             font-size: 16px;
             padding: 15px 30px;
             display: inline-block;
@@ -230,11 +236,11 @@
             border: 2px solid var(--text-light);
         }
         
-        .hero-content .btn-booking:hover {
+        .hero-btn-new-position .btn-booking:hover {
             background-color: rgba(255, 255, 255, 0.1);
             border-color: var(--text-light);
             transform: translateY(-2px);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 44px 8px rgba(0, 0, 0, 0.2);
         }
 
         .static-text-section {
@@ -489,12 +495,13 @@
             .hero-slogan p { margin: 0.5rem 0; }
             
             .hero-content {
-                padding-bottom: 100px;
+                padding-bottom: 0;
             }
+
             .hero-content .hero-logo-actual {
                 width: 100px;
                 height: 100px;
-                margin-top: 2rem;
+                margin: 2rem auto;
             }
             
             .price-option .btn-container {
@@ -503,13 +510,14 @@
                 margin-left: 0;
                 margin-right: auto;
             }
-
-            .hero-content .btn-container {
+            
+            .hero-btn-new-position {
                 width: 100%;
                 max-width: 300px;
+                margin: 0 auto 2rem auto;
             }
 
-            .hero-content .btn-booking,
+            .hero-btn-new-position .btn-booking,
             .price-option .btn-booking {
                 padding: 15px;
                 display: block;
@@ -534,10 +542,12 @@
             <div class="hero-content">
                 <h1>Alternate<br>Sauna<br>And<br>Plunge</h1>
                 <img src="images/asap_logo_primary.svg" alt="ASAP HK Logo" class="hero-logo-actual">
-                <div class="btn-container">
-                    <a href="https://forms.gle/Co999hu58XSMBV5dA?src=webhero" target="_blank" class="btn-booking">Get Early Access</a>
-                </div>
             </div>
+            
+            <div class="btn-container hero-btn-new-position">
+                <a href="https://forms.gle/Co999hu58XSMBV5dA?src=webhero" target="_blank" class="btn-booking">Get Early Access</a>
+            </div>
+            
             <div class="hero-slogan">
                 <p>11 STANLEY STREET, CENTRAL, HONG KONG</p>
             </div>
@@ -627,7 +637,6 @@
                     <div class="price-info">
                         <h3>Membership</h3>
                         <p>Unlimited sessions and priority access.<br>Exclusively for the dedicated.</p>
-                        <p>Invite only.</p>
                     </div>
                     <div class="btn-container">
                         <a href="#" class="btn-booking">Express Interest</a>
