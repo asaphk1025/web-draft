@@ -3,1041 +3,220 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ASAP HK | Contrast Therapy, Sauna & Cold Plunge in Central, Hong Kong</title>
-    <meta name="description" content="Experience hot and cold immersion for better sleep, faster recovery, and sharper focus in Central, Hong Kong.">
-    <link rel="canonical" href="https://www.comeasap.com">
-    <meta property="og:title" content="ASAP HK: Contrast Therapy & Cold Plunge in Central">
-    <meta property="og:url" content="https://www.comeasap.com">
-
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <link rel="manifest" href="favicon/site.webmanifest">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,700;1,400;1,700&family=Inter:ital,wght@0,200;0,300;0,500;0,700;1,400;1,700&display=swap" rel="stylesheet">
-
-    <style>
-        :root {
-            --infrared-orange: rgb(239, 71, 35);
-            --bright-orange: #FE5101;
-            --soft-yellow: rgb(255,248,162);
-            --dark-bg: #010101;
-            --text-light: #FFFFFC;
-            --text-gray: #AAAAAA;
-            --accent-blue: rgb(159,220,247);
-            --accent-green: rgb(221, 234, 181);
-            --primary-font: 'Inter', sans-serif;
-            --secondary-font: 'Garamond','EB Garamond', serif;
-            --section-padding: 5rem 10%;
-            --line-height: 12px;
-            --line-width: 50%;
-            --clip-height: 8.6em;
-
-            --spacing-85: -0.085em;
-            --spacing-30: -0.03em;
-            --line-height-08: 0.8em;
-        }
-
-        @font-face {
-            font-family: 'Garamond';
-            src: 
-            url('fonts/garamondbold.woff') format('woff'),
-            url('fonts/garamondbold.ttf') format('ttf');
-
-            font-weight: 800;
-        }
-
-        @font-face {
-          font-family: 'Garamond';
-          src: 
-            url('fonts/garamondmediumitalic.woff') format('woff'),
-            url('fonts/garamondmediumitalic.ttf') format('ttf');
-          font-weight: 700;
-          font-style: italic;
-      }
-
-      @font-face {
-          font-family: 'Garamond';
-          src: 
-            url('fonts/garamondregular.woff') format('woff'),
-            url('fonts/garamondregular.ttf') format('ttf');
-          font-weight: 400;
-      }
-
-      @font-face {
-          font-family: "Garamond";
-          src: 
-            url('fonts/garamondroman.woff') format('woff'),
-            url('fonts/garamondroman.ttf') format('ttf');
-          font-weight: 500;
-      }
-
-      * {
-        transition: all .2s ease-in-out;
-    }
-
-    body {
-        margin: 0;
-        font-family: var(--primary-font);
-        color: var(--text-light);
-        font-size: 16px;
-        letter-spacing: var(--spacing-30);
-        line-height: var(--line-height-08);
-        background-color: var(--infrared-orange);
-        scroll-behavior: smooth;
-    }
-
-    h1, h2, h3 {
-        font-weight: 700;
-        letter-spacing: -0.085rem;
-        line-height: var(--line-height-08);
-        margin: 0;
-    }
-
-    h1 {
-        font-family: var(--secondary-font);
-        font-weight: 700;
-        font-size: clamp(4.8rem, 10vw, 108px);
-        line-height: 0.7em;
-        letter-spacing: var(--spacing-85);
-
-    }
-
-    h2 {
-        font-family: var(--secondary-font);
-        font-weight: 400;
-        font-size: clamp(2.5rem, 5vw, 50px);
-        margin-bottom: 3rem;
-    }
-
-    h3 {
-        font-family: var(--primary-font);
-        font-weight: 700;
-        font-size: clamp(1.5rem, 3vw, 30px);
-    }
-    
-    p {
-        margin: 0.5rem 0;
-        line-height: 1.2;
-        margin-bottom:15px;
-    }
-
-    .section {
-        padding: var(--section-padding);
-        padding-top: calc(4rem + 10px);
-        box-sizing: border-box;
-        position: relative;
-        z-index: 1;
-    }
-    
-    .section-line {
-        width: var(--line-width);
-        max-width: 45vw;
-        height: var(--line-height);
-        background-color: var(--dark-bg);
-        position: absolute;
-        left: 0px;
-    }
-    
-    .section-line--blue { background-color: var(--accent-blue); }
-    .section-line--red { background-color: var(--infrared-orange); }
-
-    .section h2 {
-        margin-top: 60px;
-    }
-
-    .color-heat { color: var(--infrared-orange); }
-    .color-cold { color: var(--accent-blue); }
-
-    .header {
-        position: fixed;
-        top: 2rem;
-        right: 5%;
-        z-index: 10;
-    }
-
-    .header nav {
-        display: flex;
-        align-items: center;
-    }
-
-    .header.dark-bg a { color: var(--dark-bg); fill: var(--dark-bg)!important;
-    }
-    .header a {
-        font-family: var(--primary-font);
-        font-size: 12px;
-        font-weight: 400;
-        letter-spacing: var(--spacing-30);
-        line-height: var(--line-height-08);
-        text-decoration: none;
-        color: var(--text-light);
-        margin-left: 2rem;
-        text-transform: uppercase;
-    }
-
-    .header a:hover {
-        color: var(--soft-yellow);
-    }
-
-    #instagram-icon {
-        fill: var(--text-light);
-    }
-
-    #instagram-icon:hover {
-        fill: var(--soft-yellow);
-    }
-
-    .btn-container {
-        margin-top: 1.5rem;
-        width: auto;
-    }
-
-    .price-option   .btn-container {
-        margin-top: 1rem;
-    }
-
-    .btn-empty {
-        height: 44px;
-    }
-
-    .btn-booking {
-        display: inline-block;
-        text-decoration: none;
-        padding: 12px 28px;
-        font-family: var(--primary-font);
-        font-size: 16px;
-        font-weight: 300;
-        letter-spacing: var(--spacing-30);
-        line-height: 1.2;
-        border-radius: 50px;
-        text-align: center;
-        border: 2px solid var(--dark-bg);
-        color: var(--dark-bg);
-    }
-
-    .btn-booking:hover {
-        background-color: var(--soft-yellow);
-    }
-
-    .video-bg {
-      position: relative;
-      width: 100%;
-      height: 100vh; /* Adjust as needed */
-      overflow: hidden;
-  }
-
-  .video-bg video {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      min-width: 100%;
-      min-height: 100%;
-      width: auto;
-      height: auto;
-      transform: translate(-50%, -50%);
-      object-fit: cover;
-      z-index: -1;
-  }
-
-  .hero-section {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    color: var(--text-light);
-    position: relative;
-    z-index: 1;
-}
-
-
-.hero-section::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(
-        135deg,
-        var(--infrared-orange) 0%,
-        var(--bright-orange) 20%,
-        var(--soft-yellow) 50%,
-        var(--bright-orange) 80%,
-        var(--infrared-orange) 100%
-    );
-    background-size: 180% 180%;
-    animation: blurred-gradient-animation 16s cubic-bezier(0.4, 1.6, 0.6, 2) infinite;
-    filter: blur(80px);
-    z-index: -1;
-}
-
-@keyframes blurred-gradient-animation {
-    0% { transform: rotate(0deg) translate(0%, 0%); }
-    25% { transform: rotate(90deg) translate(15%, -15%); }
-    50% { transform: rotate(180deg) translate(25%, 25%); }
-    75% { transform: rotate(270deg) translate(-15%, 15%); }
-    100% { transform: rotate(360deg) translate(0%, 0%); }
-}
-
-.hero-content {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 2rem; 
-}
-
-.hero-logo-actual {
-    width: 6vw;
-    height: auto;
-    margin: 2rem auto;
-    display: block;
-}
-
-.hero-logo-actual svg path {
-    fill: var(--text-light);
-}
-
-.hero-logo-actual svg:hover path {
-    fill: var(--soft-yellow);
-}
-
-.hero-slogan {
-    position: absolute;
-    bottom: 2rem;
-    align-items: center;
-}
-
-.hero-slogan p {
-    font-family: var(--primary-font);
-    font-weight: 400;
-    font-size: 12px;
-    letter-spacing: var(--spacing-30);
-    line-height: var(--line-height-08);
-    margin: 0;
-}
-
-.hero-btn-new-position {
-    position: relative;
-    z-index: 2;
-    margin: 0 auto 2rem auto;
-}
-
-.hero-btn-new-position .btn-booking {
-    padding: 20px 35px;
-    display: inline-block;
-    background-color: transparent;
-    color: var(--text-light);
-    border: 2px solid var(--text-light);
-}
-
-.hero-btn-new-position .btn-booking:hover {
-    background-color:  var(--accent-blue);
-    color: var(--dark-bg);
-    border: 2px solid var(--dark-bg);
-}
-
-.static-text-section {
-    background-color: var(--text-light);
-    padding: 2rem 0;
-    width: 100%;
-    overflow-x: hidden;
-}
-
-.static-text-section p {
-    color: var(--text-gray);
-    font-family: var(--secondary-font);
-    font-size: clamp(1rem, 6vw, 50px);
-    font-weight: 400;
-    line-height: 1.2;
-    letter-spacing: 0;
-    width: 100%;
-    position: relative;
-    margin: 0;
-}
-
-#text-wrapper {
-    display: inline-block;
-    white-space: nowrap;
-    position: relative;
-    text-align: center;
-    font-weight: 400;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.hover-word {
-    transition: all 1s ease-in-out;
-
-}
-
-.hover-word:hover {
-  color: var(--dark-bg);
-  transition: all 0.2s ease-in-out;
-
-}
-
-.bold {
-    font-weight: 800;
-}
-
-.highlight {
-    color: var(--infrared-orange);
-    font-weight: 700;
-}
-
-.highlight svg {
-    width: 160px;
-}
-
-.highlight svg path{
-    fill: var(--infrared-orange);
-}
-
-.section-1 {
-    background-color: var(--text-light);
-    color: var(--dark-bg);
-    background-color: var(--infrared-orange);
-    color: #ffffff;
-    padding-top: calc(4rem + 140px);
-
-}
-.section-1-content {
-    max-width: 600px;
-    margin-top: 20vw;
-    width: 50%;
-    margin-left: auto;
-}
-
-.section-1-content p {
-    text-align: justify;
-}
-
-.yellow-underline {
-  text-decoration: underline;
-  text-decoration-color: var(--soft-yellow);
-  text-decoration-thickness: 2px;
-  text-underline-offset: 4px; 
-}
-
-.experience {
-    background-color: var(--dark-bg);
-}
-
-.experience .experience-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    align-items: stretch;
-    margin-top: 3rem;
-}
-
-.experience-block {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
-.experience-block .experience-content {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    justify-content: flex-start;
-}
-
-.experience-block img {
-    width: 100%;
-    height: 400px;
-    display: block;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 1.5rem;
-}
-
-.experience-block h3 {
-    text-underline-offset: 8px;
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-}
-
-.section-3 {
-    background-color: var(--dark-bg);
-    text-align: center;
-    padding:10rem  5rem;
-}
-
-.pricing {
-    background-color: var(--text-light);
-    color: var(--dark-bg);
-}
-
-.pricing h3 {
-    font-size: clamp(1.2rem, 2.5em, 30px);
-    margin-top: 0;
-    margin-bottom: 1rem;
-}
-
-.pricing .price-head { color: var(--dark-bg); }
-.pricing .price-subhead { color: var(--accent-blue); }
-
-.price-grid-top {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    margin-bottom: 6rem;
-}
-.price-option {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-.price-info { flex-grow: 1; }
-.price-info p {
-    font-family: var(--primary-font);
-    font-weight: 300;
-    font-size: inherit;
-    letter-spacing: var(--spacing-30);
-    line-height: 1.2;
-    margin: 0.5rem 0;
-}
-
-.price-tag-container {
-/*    display: flex;
-    align-items: flex-end;
-    height: 30px;*/
-    margin-top: 1.5rem;
-}
-.price-tag {
-    font-family: var(--primary-font);
-    font-weight: 700;
-    font-size: 30px;
-    letter-spacing: var(--spacing-30);
-    line-height: 1.2;
-    margin: 0px;
-}
-.strikethrough { text-decoration: line-through; opacity: 0.5; }
-.price-grid-bottom { display: grid; grid-template-columns: 1fr;margin-bottom: 6rem; }
-.price-grid-bottom h3 { color: var(--infrared-orange); }
-
-.price-grid-bottom .price-option{
-    margin-bottom: 6rem;
-}
-
-.faq-section { background-color: var(--dark-bg); }
-.faq-item {
-    border-bottom: 2px solid var(--accent-blue);
-    padding: 1.5rem 0;
-}
-
-.faq-question {
-    background: none;
-    border: none;
-    color: inherit;
-    font-family: inherit;
-    font-size: 16px;
-    width: 100%;
-    padding: 0;
-    cursor: pointer;
-    outline: none;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-height: 55px;
-}
-
-.faq-question h4{
-    font-family: var(--primary-font);
-    font-weight: 600;
-    font-size: clamp(1.2rem, 2.2vw, 25px);
-}
-
-.faq-question p {
-    margin: 0;
-    font-size: inherit;
-    text-align: left;
-    display: flex;
-    align-items: center;
-    letter-spacing: var(--spacing-30);
-}
-.faq-question p span { font-weight: bold; margin-right: 1rem; }
-.faq-question::after { content: '+'; font-size: 1.5rem; transition: transform 0.3s ease; }
-.faq-question[data-expanded="true"]::after { content: '-'; }
-
-.faq-answer {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-    font-size: 16px;
-    line-height: 1.4;
-    letter-spacing: 0;
-    padding-left: 30px;
-    width: calc(100% - 50px);
-}
-
-.faq-answer[data-expanded="true"] {
-}
-
-.section-4 { background-color: var(--dark-bg); text-align: center; }
-
-.section-4 h2 {
-    font-family: var(--secondary-font);
-    font-weight: 700;
-    font-size: 40px;
-    margin: 0px;
-}
-
-.section-4 .address {
-    font-family: var(--secondary-font);
-    font-weight: 300;
-    margin: 20px;
-}
-
-.text-logo-actual {
-    width: 14em;
-    max-width: 300px;
-    height: auto;
-    margin: 10px auto;
-}
-
-.text-logo-actual path {
-    fill: var(--text-light);
-}
-
-.text-logo-actual:hover path {
-    fill: var(--soft-yellow);
-}
-
-
-footer { background-color: var(--dark-bg); text-align: center; padding: 1rem 0; display: flex; flex-direction: column; align-items: center; }
-
-.footer-logo-actual {
-    height: auto;
-    margin: 1rem;
-    width: 6.5vw;
-
-}
-
-footer p {
-    font-size: 12px;
-    font-family: var(--primary-font);
-    font-weight: 700;
-    font-style: italic;
-    letter-spacing: 0.05em;
-    line-height: var(--line-height-08);
-    opacity: 0.3;
-    margin: 0;
-    text-transform: uppercase;
-}
-
-
-@media (max-width: 768px) {
-    :root {
-        --section-padding: 4rem 5%;
-    }
-
-    .section, .section-1 { padding: var(--section-padding); }
-    .section-1-content { max-width: 100%; margin: 0 auto; width: 80%;}
-    .section-line { margin: 0; margin-bottom: 3rem; }
-
-    .header { 
-        right: 50%; 
-        transform: translateX(50%); 
-        top: 1rem; 
-        width: 100%; 
-        box-sizing: border-box;
-        padding: 0 5%;
-    }
-    .header nav {
-        text-align: center;
-        justify-content: center;
-    }
-    .header a { margin: 0 0.5rem; }
-    .header #instagram-icon {margin-left: 1rem} 
-
-    .static-text-section p {
-        font-size: clamp(1rem, 8vw, 60px);
-    }
-
-    .experience .experience-grid {
-        grid-template-columns: 1fr;
-        gap: 4rem;
-        margin-top: 2rem;
-    }
-
-    .experience-block img {
-        height: 300px;
-    }
-
-    .price-grid-top {
-        grid-template-columns: 1fr;
-        gap: 4rem;
-    }
-
-    .hero-slogan { flex-direction: column; bottom: 1rem; align-items: center; }
-    .hero-slogan p { margin: 0.5rem 0; }
-
-    .hero-content {
-        padding-bottom: 0;
-    }
-
-    .hero-content .hero-logo-actual {
-        width: 70px;
-        height: auto;
-        margin: 2rem auto;
-    }
-
-    .price-option .btn-container {
-        width: 100%;
-        max-width: 300px;
-        margin-left: 0;
-        margin-right: auto;
-    }
-
-    .hero-btn-new-position {
-        width: 100%;
-        max-width: 300px;
-        margin: 0 auto 2rem auto;
-    }
-
-    .hero-btn-new-position .btn-booking,
-    .price-option .btn-booking {
-        padding: 15px;
-        display: block;
-        width: 100%;
-    }
-
-}
-
-@media (max-width: 575px){
-    .highlight svg {
-        width: 26vw;
-    }
-}
-</style>
+    <title>ASAP | Central's Alternate Sauna and Plunge</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header class="header">
+    <header class="main-header">
+        <div class="logo">
+            <img src="image/logo.png" alt="ASAP Logo">
+        </div>
         <nav>
-            <a href="#experience">Experience</a>
-            <a href="#pricing">Pricing</a>
-            <!-- <a href="community-light.html">Community</a> -->
-            <a href="#faq">Faq</a>
-            <a id="instagram-icon" href="https://www.instagram.com/comeasaphk/"><svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
-          </svg></a>
+            <ul>
+                <li><a href="#">EXPERIENCE</a></li>
+                <li><a href="#">PRICING</a></li>
+                <li><a href="#">COMMUNITY</a></li>
+                <li><a href="#">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
 
-      </nav>
-  </header>
-
-  <main>
-    <div class="hero-section video-bg">
-        <video autoplay muted loop playsinline>
-            <source src="video/asap_bg.mp4" type="video/mp4">
-            </video>
-            <div class="hero-content">
-                <h1>Alternate<br>Sauna<br>And<br>Plunge</h1>
-                <div  class="hero-logo-actual">
-                    <svg alt="ASAP HK Logo" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 669.11 865.82">
-                        <path class="cls-1" d="M653.71,110.63c-14.91-19.48-33.09-32.22-53.99-37.86-16.55-4.45-34.8-6.8-54.14-7.01l-1.99.03c-19.89.96-39.55,5.41-58.43,13.24-18.97,7.86-35.97,18.68-50.5,32.16-1.9,1.76-5.32,5.33-10.85,12.37-4.13,5.25-10.33,8.11-16.69,8.11-3,0-6.05-.64-8.91-1.97-8.93-4.14-13.84-13.87-11.86-23.51.5-2.43.93-4.85,1.28-6.95,1.54-10.67,1.36-21.25-.54-31.41-2.17-11.52-7.14-22.24-15.34-32.59-6.22-8.53-14.14-15.07-23.54-19.43-8.63-3.99-17.74-6.02-27.1-6.02l-1.99.03c-9.97.31-19.19,2.75-27.41,7.26-3.19,1.75-6.7,2.62-10.22,2.62-3.96,0-7.91-1.1-11.37-3.3-5.28-3.34-11.03-6.1-17.12-8.21-15.68-5.43-31.88-8.19-48.18-8.19-1.48,0-2.97.02-4.47.07-13.89.43-27.6,2.76-40.71,6.93-12.58,4-24.83,9.52-37.18,16.7C69.22,55.68,36.84,105.17,28.8,166.94c-4.55,33.59,4.1,66.03,24.93,93.72,9.74,12.77,21.93,22.67,36.21,29.42,5.9,2.79,11.91,4.98,17.91,6.54,9.23,2.39,15.74,10.65,15.91,20.19.15,9.54-6.06,18.01-15.21,20.71-1.86.54-3.69,1.15-5.5,1.82-17.03,6.3-32.45,15.43-45.84,27.14-10.47,9.14-19.58,19.65-27.07,31.19-7.18,11.11-13.15,23.14-18.13,36.51-20.85,58.5-14.46,117.3,18.54,170.14,17.8,28.83,45.07,48.41,78.72,56.59,7.63,1.8,15.36,2.71,22.97,2.71s15.92-.99,23.7-2.94c15.27-3.83,28.67-10.71,39.82-20.45,9.66-8.42,17.31-18.53,22.75-30.02,3.52-7.47,11.03-12.15,19.17-12.15.7,0,1.4.04,2.1.1,1.93.19,3.88.3,5.69.31,1.35,0,2.7-.04,4.03-.12.41-.03.84-.04,1.25-.04,6.99,0,13.58,3.46,17.54,9.28,4.21,6.18,4.85,14.1,1.71,20.88-1.34,2.89-2.8,6.06-4.39,9.64-2.79,6.23-7.27,15.68-12.36,26.42l-.49,1.04c-16.97,35.81-30.3,64.33-34.63,78.66-6.8,22.49-9.42,40.8-7.97,56.77,1.04,19.18,8.42,35.1,21.89,47.29,12.73,11.47,28.04,17.53,44.29,17.53l2.33-.04c17.4-.61,33.28-7.68,46.64-21.19,15.82-16.98,30.19-36.32,42.72-57.48,4.56-7.71,10.82-18.41,17.39-29.64,3.93-6.72,11.01-10.52,18.33-10.52,3.16,0,6.36.71,9.37,2.19,6.84,3.37,14,5.53,21.28,6.42,4.78.59,9.75.89,14.77.89,19.9,0,40.09-4.7,56.84-13.24,19.49-9.93,33.28-27.23,44.4-41.19l4-4.99c12.26-15.09,23.37-31.41,33.02-48.51,9.78-17.38,17.79-35.56,23.78-54.02,6.52-20.15,9.03-40.27,7.43-60.45-.64-12.68-3.97-24.48-9.9-35.04-5.79-10.3-13.41-19.04-22.59-25.94-4.43-3.33-9.22-6.2-14.22-8.54-6.75-3.17-11.35-9.66-12.09-17.09-.75-7.43,2.47-14.7,8.47-19.15,11.28-8.39,20.72-18.3,28.05-29.46,7.78-11.88,13.14-25.15,15.9-39.44,3.05-15.75,1.66-31.81-4.29-48.23-6-17.84-15.55-32.29-28.38-42.98-5.76-4.79-8.56-12.26-7.38-19.66,1.18-7.4,6.18-13.63,13.14-16.38,2.06-.81,4.13-1.65,6.22-2.52,2.6-1.09,5.38-1.64,8.19-1.64.25,0,.5,0,.75.02,1.82.06,3.65.12,5.45.12,14.06,0,25.44-3.65,34.97-11.28,16.47-12.93,25.83-30.18,27.82-51.25,1.83-19.72-3.17-38.46-15.04-54.96ZM146.19,540.94c-1.74,7.76-4.58,12.97-7.99,14.67l-5.39-.15c-1.94-1-3.87-2.98-5.76-5.88-4.01-6.17-7.54-15.51-10.22-27.01-1.67-7.18-2.97-15.12-3.81-23.09-.37-3.48-.64-6.98-.82-10.41-.61-11.75,0-23.61,1.67-32.54,2-10.61,5.36-16.68,9.74-17.57,8.25-1.52,16.18,16.74,20.38,35.5,2.45,10.96,3.99,22.88,4.45,34.48.48,12.23-.3,23.3-2.26,32ZM197.07,138.66c-5.06,10.03-11.44,20.22-18.45,29.47-7.39,9.76-15.01,17.81-22.05,23.3-6.28,4.89-11.77,7.12-15.48,6.27-1.87-.43-3.24-1.62-4.07-3.54-.86-2-1.1-4.76-.72-8.2.82-7.31,4.02-16.77,9.25-27.36,3.27-6.61,7.3-13.57,11.71-20.26,1.93-2.93,3.93-5.8,5.97-8.57,6.98-9.47,14.98-18.25,21.94-24.08,8.28-6.93,14.73-9.49,18.68-7.4,7.34,4.06,1.89,23.2-6.78,40.37ZM294.59,357.67c-8.46,0-16.16-5.05-19.51-12.9-2.42-5.69-4.96-10.96-7.75-16.1-5.21-9.61-2.28-21.6,6.78-27.71,3.7-2.5,7.36-5.35,10.83-8.45,5.35-4.8,10.12-9.88,14.24-15.17,2.97-3.79,5.65-7.16,8.1-10.2.37-.47.74-.95,1.18-1.59,4.71-6.69,9.79-14.39,15.52-23.52,3.95-6.29,10.81-9.94,17.98-9.94,1.89,0,3.79.25,5.68.77,9.05,2.51,15.37,10.67,15.54,20.06.11,6.17.68,12.55,1.7,18.98,1.66,9.01-2.71,18.24-11.01,22.61-4.62,2.42-9.05,5.32-13.13,8.58-12.38,9.89-21.05,23.11-25.76,39.29-2.5,8.62-10.15,14.72-19.11,15.26-.42.03-.85.04-1.27.04ZM364.81,473.95c-2.91,3.65-5.94,7.58-9.1,11.83-3.07,4.12-6.2,8.44-9.37,12.92-4.04,5.71-10.55,8.96-17.32,8.96-1.77,0-3.58-.22-5.35-.68-8.54-2.22-14.82-9.5-15.75-18.28-.86-7.99-1.97-16.75-3.33-26.2-.71-5.1-1.51-10.24-2.37-15.42-1.47-8.83,2.76-17.63,10.57-22,3.23-1.81,6.81-2.7,10.36-2.7,4.99,0,9.96,1.77,13.92,5.2,6.33,5.5,13.42,10.33,21.05,14.36,5.6,2.95,9.59,8.24,10.88,14.43,1.29,6.19-.25,12.64-4.2,17.58ZM494.17,591.4c-5.06,10.03-11.44,20.22-18.45,29.47-7.39,9.76-15.01,17.81-22.05,23.3-6.28,4.89-11.77,7.12-15.48,6.27-1.87-.43-3.24-1.62-4.07-3.54-.86-2-1.1-4.76-.72-8.2.82-7.31,4.02-16.77,9.25-27.36,3.27-6.61,7.3-13.57,11.71-20.26,1.93-2.93,3.93-5.8,5.97-8.57,6.98-9.47,14.98-18.25,21.94-24.08,8.28-6.93,14.73-9.49,18.68-7.4,7.34,4.06,1.89,23.2-6.78,40.37Z"/>
-                    </svg>
-                </div>
-
-
-
-                <div class="btn-container hero-btn-new-position">
-                    <a href="https://forms.gle/Co999hu58XSMBV5dA?src=webhero" target="_blank" class="btn-booking">Get Early Access</a>
-                </div>
-            </div>
-            <div class="hero-slogan">
-                <p>11 STANLEY STREET, CENTRAL, HONG KONG</p>
-            </div>
-        </div>
-
-        <div class="static-text-section">
-            <p>
-                <span id="text-wrapper">
-                 <span class="hover-word"> Weighed down?</span> <span class="hover-word">Agitated?</span> <span class="hover-word">Irritated?</span> <span class="hover-word">Unfocused?</span> <span class="hover-word">Restive?</span> <span class="hover-word">Dismayed?</span> <span class="hover-word">Hopeless?</span> <span class="hover-word">Torpid?</span> <span class="hover-word">Despondent?</span> <span class="hover-word">Overloaded?</span> <span class="hover-word">Drudging?</span> <span class="hover-word">Pensive?</span> <span class="hover-word">Somber?</span> <br>
-
-                 <span class="hover-word">Stressed?</span> <span class="hover-word">Fatigued?</span> <span class="hover-word">Hungover?</span> <span class="hover-word">Heartbroken?</span> <span class="hover-word">Depleted?</span> <span class="hover-word">Brain fog?</span> <span class="hover-word">Tired?</span> <span class="hover-word">Anxious?</span> <span class="hover-word">Torn?</span> <span class="hover-word">Blue?</span> <span class="hover-word">Burdened?</span> <span class="hover-word">Sluggish?</span> <span class="hover-word">Lack of agency?</span><br>
-
-                 <span class="hover-word">Stalled?</span> <span class="hover-word">Unsettled?</span> <span class="hover-word">Not yourself?</span> <span class="hover-word">Uninspired?</span> <span class="hover-word">Gloomy?</span> <span class="hover-word">Restless?</span> <span class="hover-word">Heavy?</span> <span class="hover-word">Drained?</span> <span class="hover-word">Groggy?</span> <span class="hover-word">Foggy?</span> <span class="hover-word">Enervated?</span> <span class="hover-word">Knocked out?</span><br>
-
-                 <span class="hover-word">Weary?</span> <span class="hover-word">Uninterested?</span> <span class="hover-word">Off?</span> <span class="hover-word">Sore?</span> <span class="hover-word">Bored?</span> <span class="hover-word">Exhausted?</span> <span class="hover-word">Frazzled?</span> <span class="hover-word">Lost?</span> <span class="hover-word">Overwhelmed?</span> <span class="hover-word">Down?</span> <span class="hover-word">Got yelled at?</span> <span class="hover-word">Vapid?</span> <span class="hover-word">Bleak?</span> <span class="hover-word">Debilitated?</span><br>
-
-                 <span class="hover-word">Emo?</span> <span class="hover-word">Lifeless?</span> <span class="hover-word">Fidgety?</span> <span class="hover-word">Isolated?</span> <span class="hover-word">Poor sleep?</span> <span class="hover-word">Depressed?</span> <span class="hover-word">Stressed?</span>
-                 <span class="highlight"> Come
-                    <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1354.19 331.82">
-                        <path class="cls-2" d="M330.9,144.19c-1.08-48.38-12.99-92.83-30.36-115.33l-.47-.63C284.11,8.76,264.99.37,244.26.26c0,0,0,0-.01,0-.98,0-1.96.02-2.94.05C172.73.88,94.59,84.3,55.4,143.77,28.52,184.64,4.84,229.77.64,270.92c-1.25,10.26-.62,19.61,1.56,27.8,3.43,17.71,13.6,31.25,34.17,32.31,1.52.07,3.07.04,4.64-.05,9.88.48,21.29-1.73,34.04-7.25,37.61-14.84,64.32-41.29,93.38-16.74,16.85,13.04,36.01,23.65,57.65,22.16,9.31.46,19.47-1.73,30.8-8.05,52.4-31.82,72.96-100.11,74.05-164.3,0-.04,0-.09,0-.13.06-3.41.06-6.8,0-10.18-.01-.77-.02-1.53-.04-2.3ZM208.45,170.43c-2.22,4.17-4.69,8.21-7.64,11.89-2.79,3.48-6.03,6.65-9.83,8.97-2.33,1.43-5.21,2.54-7.75,1.53-1.64-.65-2.85-2.13-3.5-3.76-1.27-3.23-.7-6.86-.04-10.15.67-3.38,1.67-6.68,2.92-9.89,2.52-6.47,6.05-12.52,10.09-18.16.61-.85,1.22-1.68,1.85-2.51,2.85-3.76,5.98-7.42,9.97-9.93,2.05-1.29,4.48-2.27,6.85-1.76,2.52.54,4.44,2.74,5.24,5.19.8,2.45.63,5.11.18,7.64-.98,5.47-3.23,10.63-5.64,15.63-.86,1.78-1.75,3.56-2.68,5.31Z"/>
-                        <path class="cls-2" d="M598.89,155.75c-11.58-13.13-27.18-20.52-1.81-29.11,26.5-9.74,66.44-18.52,86.84-43.87,19.9-30.67-4.77-55.53-36.9-69.83C624.46,3.53,598.14-.19,571.24,0h-1.11c-61.12-.71-161.69,34.12-169.05,107.61-4.43,39.88,59.91,75.31,75.34,92.38.41,1.86-1.23,2.1-3.74,2.5-22.08.72-49.19-1.53-73.48,2.63-73.25,12.92-74.17,84.4-26.71,108.58,53.94,29.91,152.57,22.49,219.11-28.47,61.83-50.3,45.56-95.01,7.3-129.5Z"/>
-                        <path class="cls-2" d="M982.3,144.96c-1.08-48.38-12.99-92.83-30.36-115.33l-.47-.63c-15.96-19.47-35.08-27.86-55.81-27.97,0,0,0,0-.01,0-.98,0-1.96.02-2.94.05-68.57.58-146.72,83.99-185.91,143.46-26.88,40.87-50.56,86-54.76,127.15-1.25,10.26-.62,19.61,1.56,27.8,3.43,17.71,13.6,31.25,34.17,32.31,1.52.07,3.07.04,4.64-.05,9.88.48,21.29-1.73,34.04-7.25,37.61-14.84,64.32-41.29,93.38-16.74,16.85,13.04,36.01,23.65,57.65,22.16,9.31.46,19.47-1.73,30.8-8.05,52.4-31.82,72.96-100.11,74.05-164.3,0-.04,0-.09,0-.13.06-3.41.06-6.8,0-10.18-.01-.77-.02-1.53-.04-2.3ZM859.68,171.1c-1.5,2.61-3.12,5.16-4.82,7.64-3.25,4.73-6.85,9.33-11.52,12.68-1.38.99-2.88,1.88-4.53,2.3-1.65.42-3.48.35-4.96-.51-6.01-3.46-2.98-13.95-1.43-18.99,2.29-7.44,6.1-14.32,10.38-20.78,3.53-5.31,7.51-10.5,12.82-14.03,2.57-1.71,5.97-2.98,8.66-1.46,2.03,1.15,2.98,3.58,3.33,5.89.58,3.85-.09,7.8-1.15,11.55-1.56,5.51-3.94,10.73-6.78,15.7Z"/>
-                        <path class="cls-2" d="M1343.67,40.03l-.39-.69c-21.87-41.59-86.13-45.79-140.94-32.71-123.49,25.72-213.64,176.29-196.62,269.17,4.61,33.91,38.97,73.16,85.33,46.88,20.85-11.43,32.49-32.01,49.72-45.58,15.71-12.67,35.72-13.31,54.44-15.5,14.48-1.53,29.66-5.31,43.91-11.75,83.22-37.47,139.43-147.37,104.55-209.82ZM1221.56,170.33c-1.52,2.65-3.17,5.23-4.89,7.74-3.24,4.7-6.83,9.26-11.47,12.59-1.36.97-2.82,1.85-4.44,2.28-1.62.43-3.41.38-4.88-.42-5.53-2.99-3.47-11.79-2.26-16.52,1.7-6.64,4.6-12.92,8.13-18.76,1.81-3,3.8-5.89,5.91-8.69,2.83-3.75,5.93-7.4,9.87-9.97,2.67-1.74,6.28-2.91,8.95-1.17,1.74,1.14,2.6,3.24,2.97,5.28.64,3.54.1,7.2-.79,10.69-1.52,5.96-4.03,11.6-7.09,16.96Z"/>
-                    </svg>
-                </span>  
-                <span class="hover-word">Burned out?</span> <span class="hover-word">Blah?</span> <span class="hover-word">Overstimulated?</span> <span class="hover-word">Immobile?</span> <span class="hover-word">Wistful?</span> <span class="hover-word">Melancholic?</span> <br> 
-
-                <span class="hover-word">Out-of-whack?</span> <span class="hover-word">Lethargic?</span> <span class="hover-word">Scattered?</span> <span class="hover-word">Numb?</span> <span class="hover-word">Low dopamine?</span> <span class="hover-word">Just broke up?</span> <span class="hover-word">Dazed?</span> <span class="hover-word">Apathetic?</span> <span class="hover-word">Sapped?</span> <span class="hover-word">Off-balance?</span> <span class="hover-word">Wearisome?</span> <br>
-
-                <span class="hover-word">Listless?</span> <span class="hover-word">Gutted?</span> <span class="hover-word">Stagnant?</span> <span class="hover-word">Fraught?</span> <span class="hover-word">Dejected?</span> <span class="hover-word">Distracted?</span> <span class="hover-word">Spent?</span> <span class="hover-word">Lonely?</span> <span class="hover-word">Sad?</span> <span class="hover-word">Jaded?</span> <span class="hover-word">Muddled?</span> <span class="hover-word">Rundown?</span> <span class="hover-word">Lonesome?</span> <span class="hover-word">Zapped?</span> <span class="hover-word">Mournful?</span> <span class="hover-word">Droopy?</span> <br>
-
-                <span class="hover-word">Disinterested?</span> <span class="hover-word">Blocked?</span> <span class="hover-word">Disoriented?</span> <span class="hover-word">Uneasy?</span> <span class="hover-word">Blue?</span> <span class="hover-word">Frustrated?</span> <span class="hover-word">Stalled?</span> <span class="hover-word">Meh?</span> <span class="hover-word">Forlorn?</span> <span class="hover-word">Sorrowful?</span> <span class="hover-word">Discouraged?</span> <span class="hover-word">Unmotivated?</span> <span class="hover-word">Timid?</span> <br>
-
-                <span class="hover-word">Unraveled?</span> <span class="hover-word">Haggard?</span> <span class="hover-word">Stressed?</span> <span class="hover-word">Listless?</span> <span class="hover-word">Forbidding?</span> <span class="hover-word">Gloaming?</span> <span class="hover-word">Weighed down?</span> <span class="hover-word">Ennui?</span> <span class="hover-word">Wretched?</span>
-<!--                     Weighed down? Agitated? Irritated?  Unfocused? Restive? Dismayed? Hopeless? Torpid? Despondent? Overloaded? Drudging? Pensive? Somber? <br>
-
-                    Stressed? Fatigued? Hungover? Heartbroken? Depleted? Brain fog? Tired? Anxious? Torn? Blue? Burdened? Sluggish? Lack of agency?<br>
-
-                     Stalled? Unsettled? Not yourself? Uninspired? Gloomy? Restless? Heavy? Drained? Groggy? Foggy?  Enervated? Knocked out?<br>
-
-                    Weary? Uninterested? Off? Sore? Bored? Exhausted? Frazzled? Lost? Overwhelmed? Down? Got yelled at? Vapid? Bleak? Debilitated?<br>
-
-                    Emo?  Lifeless? Fidgety? Isolated? Poor sleep?   Depressed?  Stressed?
-                    <span class="highlight"> Come ASAP.</span>  
-                      Burned out? Blah? Overstimulated? Immobile?  Wistful?  Melancholic? <br> 
-
-                    Out-of-whack?  Lethargic? Scattered? Numb?  Low dopamine? Just broke up? Dazed? Apathetic? Sapped? Off-balance? Wearisome? <br>
-
-                    Listless? Gutted? Stagnant? Fraught? Dejected? Distracted? Spent? Lonely? Sad? Jaded? Muddled? Rundown? Lonesome? Zapped? Mournful? Droopy? <br>
-
-                    Disinterested? Blocked? Disoriented? Uneasy? Blue? Frustrated? Stalled? Meh? Forlorn? Sorrowful? Discouraged? Unmotivated? Timid? <br>
-
-                    Unraveled? Haggard? Stressed? Listless? Forbidding? Gloaming? Weighed down? Ennui? Wretched?  -->
-                </span>
-            </p>
-        </div>
-
-        <div class="section section-1">
-            <div class="section-line section-line--blue"></div>
-            <div class="section-1-content">
-                <h2>Nothing More <br> Nothing Less</h2>
-                <p>Just sauna and cold plunge. </p>
-                <p>Between our spacious sauna and individual cold plunges exists those who <span class="yellow-underline">seek momentum</span>, <span class="yellow-underline">practice discipline</span>, and <span class="yellow-underline">inspire connections</span>.
-                </p>
-                <p>The science is clear: hot and cold immersion helps with <span class="yellow-underline">clearer headspace</span>, <span class="yellow-underline">deeper sleep</span>, <span class="yellow-underline">faster recovery</span>, and <span class="yellow-underline">lower all-cause mortality</span> (wow).
-                </p>
-                <p><strong>No, we do not have an onsen.</strong>
-                </p>
-            </div>
-        </div>
-
-        <div class="section experience" id="experience">
-            <div class="section-line section-line--blue"></div>
-            <h2>Experience<br>Contrast Therapy</h2>
-
-            <div class="experience-grid">
-
-                <div class="experience-block">
-                    <img src="images/sauna_experience.jpeg" alt="A person in a sauna, feeling the heat." loading="lazy">
-                    <div class="experience-content">
-                        <h3>In the <span class="color-heat">Heat</span></h3>
-                        <p>It’s hot - and it's about to get hotter. The temperature creeps higher as the sweat drips and <span class="yellow-underline">toxins flush away</span>. Between fight-or-flight, you gradually surrender to the heat. Your blood vessels dilate, <span class="yellow-underline">improving circulation</span>. <span class="yellow-underline">Endorphins are released</span>, whilst the tension you hold melt away.</p>
+    <main>
+        <section class="hero-container">
+            <div class="hero-pin">
+                
+                <div class="hero-background">
+                    <div class="hero-bg-img img-left"></div>
+                    <div class="hero-bg-img img-right">
+                        <div class="logo-overlay">
+                            <img src="image/logo.png" alt="ASAP Logo Overlay">
+                        </div>
                     </div>
                 </div>
 
-                <div class="experience-block">
-                    <img src="images/cold_plunge_experience.jpeg" alt="A person in a cold plunge pool." loading="lazy">
-                    <div class="experience-content">
-                        <h3>In the <span class="color-cold">Cold</span></h3>
-                        <p>It's always colder than you remember. The air leaves your lungs as you plunge in. Your nervous system reacts. <span class="yellow-underline">Adrenaline surges</span>, muscles tense, and heart rate jumps. With effort, your focus sharpens and breathing steadies. <span class="yellow-underline">Boosting endorphins</span>, <span class="yellow-underline">reducing inflamation</span>, and <span class="yellow-underline">activating brown fat (BAT)</span>. <br><br>Sleep well tonight king.</p>
+                <div class="hero-overlays">
+                    <div class="hero-panel hero-blue">
+                        <div class="hero-content">
+                            <h1>Central's</br>First Social</br>Sauna & Plunge</h1>
+                            <p>The first social sauna and plunge studio in Central, Hong Kong opening November 20.</p>
+                            <button class="btn btn-outline" onclick="document.location='https://forms.gle/RJnFu5X5kivxyRXQ9'">Get Early Access</button>
+                        </div>
+                    </div>
+                    <div class="hero-panel hero-orange">
+                        <div class="about-title">
+                            <h1>Nothing more,<br>Nothing less</h1>
+                        </div>
+                        <div class="about-content">
+                            <div class="icon-placeholder"><img src="image/ASAP logo mark_blue.png" alt="ASAP Logo Mark"></div>
+                            <p>Just sauna and cold plunge.</p>
+                            <p>Between our spacious sauna and individual cold plunges exists those who seek momentum, practice discipline, and inspire connections.</p>
+                            <p>The science is clear: hot and cold immersion helps with clearer headspace, deeper sleep, faster recovery, and lower all-cause mortality.</p>
+                            <p>No, we do not have an onsen.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div class="section section-3">        
-
-            <h2>It's Just Character Building</h2>
-
-
-            <div class="hero-logo-actual">
-                <svg alt="ASAP HK Logo" id="Layer_3" data-name="Layer 3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 669.11 865.82">
-                    <path class="cls-1" d="M653.71,110.63c-14.91-19.48-33.09-32.22-53.99-37.86-16.55-4.45-34.8-6.8-54.14-7.01l-1.99.03c-19.89.96-39.55,5.41-58.43,13.24-18.97,7.86-35.97,18.68-50.5,32.16-1.9,1.76-5.32,5.33-10.85,12.37-4.13,5.25-10.33,8.11-16.69,8.11-3,0-6.05-.64-8.91-1.97-8.93-4.14-13.84-13.87-11.86-23.51.5-2.43.93-4.85,1.28-6.95,1.54-10.67,1.36-21.25-.54-31.41-2.17-11.52-7.14-22.24-15.34-32.59-6.22-8.53-14.14-15.07-23.54-19.43-8.63-3.99-17.74-6.02-27.1-6.02l-1.99.03c-9.97.31-19.19,2.75-27.41,7.26-3.19,1.75-6.7,2.62-10.22,2.62-3.96,0-7.91-1.1-11.37-3.3-5.28-3.34-11.03-6.1-17.12-8.21-15.68-5.43-31.88-8.19-48.18-8.19-1.48,0-2.97.02-4.47.07-13.89.43-27.6,2.76-40.71,6.93-12.58,4-24.83,9.52-37.18,16.7C69.22,55.68,36.84,105.17,28.8,166.94c-4.55,33.59,4.1,66.03,24.93,93.72,9.74,12.77,21.93,22.67,36.21,29.42,5.9,2.79,11.91,4.98,17.91,6.54,9.23,2.39,15.74,10.65,15.91,20.19.15,9.54-6.06,18.01-15.21,20.71-1.86.54-3.69,1.15-5.5,1.82-17.03,6.3-32.45,15.43-45.84,27.14-10.47,9.14-19.58,19.65-27.07,31.19-7.18,11.11-13.15,23.14-18.13,36.51-20.85,58.5-14.46,117.3,18.54,170.14,17.8,28.83,45.07,48.41,78.72,56.59,7.63,1.8,15.36,2.71,22.97,2.71s15.92-.99,23.7-2.94c15.27-3.83,28.67-10.71,39.82-20.45,9.66-8.42,17.31-18.53,22.75-30.02,3.52-7.47,11.03-12.15,19.17-12.15.7,0,1.4.04,2.1.1,1.93.19,3.88.3,5.69.31,1.35,0,2.7-.04,4.03-.12.41-.03.84-.04,1.25-.04,6.99,0,13.58,3.46,17.54,9.28,4.21,6.18,4.85,14.1,1.71,20.88-1.34,2.89-2.8,6.06-4.39,9.64-2.79,6.23-7.27,15.68-12.36,26.42l-.49,1.04c-16.97,35.81-30.3,64.33-34.63,78.66-6.8,22.49-9.42,40.8-7.97,56.77,1.04,19.18,8.42,35.1,21.89,47.29,12.73,11.47,28.04,17.53,44.29,17.53l2.33-.04c17.4-.61,33.28-7.68,46.64-21.19,15.82-16.98,30.19-36.32,42.72-57.48,4.56-7.71,10.82-18.41,17.39-29.64,3.93-6.72,11.01-10.52,18.33-10.52,3.16,0,6.36.71,9.37,2.19,6.84,3.37,14,5.53,21.28,6.42,4.78.59,9.75.89,14.77.89,19.9,0,40.09-4.7,56.84-13.24,19.49-9.93,33.28-27.23,44.4-41.19l4-4.99c12.26-15.09,23.37-31.41,33.02-48.51,9.78-17.38,17.79-35.56,23.78-54.02,6.52-20.15,9.03-40.27,7.43-60.45-.64-12.68-3.97-24.48-9.9-35.04-5.79-10.3-13.41-19.04-22.59-25.94-4.43-3.33-9.22-6.2-14.22-8.54-6.75-3.17-11.35-9.66-12.09-17.09-.75-7.43,2.47-14.7,8.47-19.15,11.28-8.39,20.72-18.3,28.05-29.46,7.78-11.88,13.14-25.15,15.9-39.44,3.05-15.75,1.66-31.81-4.29-48.23-6-17.84-15.55-32.29-28.38-42.98-5.76-4.79-8.56-12.26-7.38-19.66,1.18-7.4,6.18-13.63,13.14-16.38,2.06-.81,4.13-1.65,6.22-2.52,2.6-1.09,5.38-1.64,8.19-1.64.25,0,.5,0,.75.02,1.82.06,3.65.12,5.45.12,14.06,0,25.44-3.65,34.97-11.28,16.47-12.93,25.83-30.18,27.82-51.25,1.83-19.72-3.17-38.46-15.04-54.96ZM146.19,540.94c-1.74,7.76-4.58,12.97-7.99,14.67l-5.39-.15c-1.94-1-3.87-2.98-5.76-5.88-4.01-6.17-7.54-15.51-10.22-27.01-1.67-7.18-2.97-15.12-3.81-23.09-.37-3.48-.64-6.98-.82-10.41-.61-11.75,0-23.61,1.67-32.54,2-10.61,5.36-16.68,9.74-17.57,8.25-1.52,16.18,16.74,20.38,35.5,2.45,10.96,3.99,22.88,4.45,34.48.48,12.23-.3,23.3-2.26,32ZM197.07,138.66c-5.06,10.03-11.44,20.22-18.45,29.47-7.39,9.76-15.01,17.81-22.05,23.3-6.28,4.89-11.77,7.12-15.48,6.27-1.87-.43-3.24-1.62-4.07-3.54-.86-2-1.1-4.76-.72-8.2.82-7.31,4.02-16.77,9.25-27.36,3.27-6.61,7.3-13.57,11.71-20.26,1.93-2.93,3.93-5.8,5.97-8.57,6.98-9.47,14.98-18.25,21.94-24.08,8.28-6.93,14.73-9.49,18.68-7.4,7.34,4.06,1.89,23.2-6.78,40.37ZM294.59,357.67c-8.46,0-16.16-5.05-19.51-12.9-2.42-5.69-4.96-10.96-7.75-16.1-5.21-9.61-2.28-21.6,6.78-27.71,3.7-2.5,7.36-5.35,10.83-8.45,5.35-4.8,10.12-9.88,14.24-15.17,2.97-3.79,5.65-7.16,8.1-10.2.37-.47.74-.95,1.18-1.59,4.71-6.69,9.79-14.39,15.52-23.52,3.95-6.29,10.81-9.94,17.98-9.94,1.89,0,3.79.25,5.68.77,9.05,2.51,15.37,10.67,15.54,20.06.11,6.17.68,12.55,1.7,18.98,1.66,9.01-2.71,18.24-11.01,22.61-4.62,2.42-9.05,5.32-13.13,8.58-12.38,9.89-21.05,23.11-25.76,39.29-2.5,8.62-10.15,14.72-19.11,15.26-.42.03-.85.04-1.27.04ZM364.81,473.95c-2.91,3.65-5.94,7.58-9.1,11.83-3.07,4.12-6.2,8.44-9.37,12.92-4.04,5.71-10.55,8.96-17.32,8.96-1.77,0-3.58-.22-5.35-.68-8.54-2.22-14.82-9.5-15.75-18.28-.86-7.99-1.97-16.75-3.33-26.2-.71-5.1-1.51-10.24-2.37-15.42-1.47-8.83,2.76-17.63,10.57-22,3.23-1.81,6.81-2.7,10.36-2.7,4.99,0,9.96,1.77,13.92,5.2,6.33,5.5,13.42,10.33,21.05,14.36,5.6,2.95,9.59,8.24,10.88,14.43,1.29,6.19-.25,12.64-4.2,17.58ZM494.17,591.4c-5.06,10.03-11.44,20.22-18.45,29.47-7.39,9.76-15.01,17.81-22.05,23.3-6.28,4.89-11.77,7.12-15.48,6.27-1.87-.43-3.24-1.62-4.07-3.54-.86-2-1.1-4.76-.72-8.2.82-7.31,4.02-16.77,9.25-27.36,3.27-6.61,7.3-13.57,11.71-20.26,1.93-2.93,3.93-5.8,5.97-8.57,6.98-9.47,14.98-18.25,21.94-24.08,8.28-6.93,14.73-9.49,18.68-7.4,7.34,4.06,1.89,23.2-6.78,40.37Z"/>
-                </svg>
+        <section class="featured">
+            <h1>Come Once</h1>
+            <div class="product-slider">
+                <div class="product-card">
+                    <h3>Ice Breaker Offer</h3>
+                    <p>Introductory offer for first time visitors. Drop in and try it for yourself.</p>
+                    <p>HK$240.00</p>
+                </div>
+                <div class="product-card">
+                    <h3>Day Pass</h3>
+                    <p>Access the facilities with no time limit and no re-entry. Perfect for those with commitment issues. Towels provided.</p>
+                    <p>HK$280.00</p>
+                </div>
             </div>
-        </div>
-
-        <div class="section pricing" id="pricing">
-            <div class="section-line section-line--red"></div>
-            <h2>Come Once</h2>
-            <div class="price-grid-top">
-                <div class="price-option">
-                    <div class="price-info">
-                        <h3><span class="price-subhead">Ice Breaker</span> <span class="price-head">Offer</span></h3>
-                        <p>Introductory offer for first time visitors. </p>
-                        <p>Drop in and try it for yourself.</p>
-                        
-                    </div>
-                    <div class="price-tag-container">
-                        <p class="price-tag"><strong>$299</strong></p>
-                    </div>
-                    On sign up
-
-                    <div class="btn-container">
-                        <a href="#" class="btn-booking">Register Now</a>
-                    </div>
+            <h1>Come Often</h1>
+            <div class="product-slider">
+                <div class="product-card">
+                    <h3>Membership</h3>
+                   <p>Priority access with bragging rights. Enjoy exclusive Day Pass rate of $230 every visit.</p>
+                    <p>HK$520.00 per month</p>
                 </div>
-                <div class="price-option">
-                    <div class="price-info">
-                        <h3><span class="price-head">Day Pass</span></h3>
-                        <p>Access the facilities with no time limit and no re-entry. <br>Perfect for those with commitment issues.</p>
-                        <p>Towels and swimwear provided.</p>
-                        
-
-                    </div>
-                    <div class="price-tag-container">
-                        <p class="price-tag"><span><strong>$360</strong></span></p>
-                    </div>
-                    Pay on-site
-                    <div class="btn-container">
-                        <div class="btn-empty"></div>
-                    </div>
+                <div class="product-card">
+                    <h3>The Big Dipper</h3>
+                    <p>Unlimited sessions and priority access. Exclusively for the dedicated.</p>
+                    <p>By invite only.</p>
                 </div>
-
             </div>
 
-            <h2>Come Often</h2>
-            <div class="price-grid-bottom">
-                <div class="price-option">
-                    <div class="price-info">
-                        <h3>Membership ♣</h3>
-                        <p> Priority access with bragging rights. <br>
-                           Enjoy exclusive Day Pass rate of <span class="bold">$230</span> every visit.
-</p>
+        </section>
 
-                    </div>
-                    <div class="price-tag-container">
-                        <p class="price-tag"><strong>$520</strong></p>
-                        per month
-                    </div>
-                    <div class="btn-container">
-                        <a href="#" class="btn-booking">Register Now</a>
-                    </div>
+        <section class="immersion">
+            <div class="immersion-content">
+                <div class="icon-placeholder-small"></div>
+                <h3>SPECIAL OFFER</h3>
+                <h1>Exclusive Immersion</h1>
+                <button class="btn btn-outline">Explore Now</button>
+            </div>
+        </section>
+
+        <section class="faq">
+            <div class="faq-content">
+                <div class="faq-title">
+                    <h1>FAQ</h1>
                 </div>
-                <div class="price-option">
-                    <div class="price-info">
-                        <h3>The Big Dipper ✧</h3>
-                        <p>Unlimited sessions and priority access.<br>Exclusively for the dedicated.</p>
-                        <p>By invite only.</p>
+                <div class="faq-list">
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>When are you open?</span>
+                            <div class="faq-icon"></div>
+                        </button>
+                        <div class="faq-answer">
+                            <p>7am–10pm daily. Check our website for any changes. Some hours are reserved for quiet practice, others for social vibes.</p>
+                        </div>
                     </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Do I need to book?</span>
+                            <div class="faq-icon"></div>
+                        </button>
+                        <div class="faq-answer">
+                            <p>No booking required.Drop in and dive right into the experience.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>What should I bring?</span>
+                            <div class="faq-icon"></div>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Swimwear is a must. We provide towels, optional swim trunks (in case you're already on your way), and fluid replenishment. Bring an open mind.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>Are phones or photos allowed?</span>
+                            <div class="faq-icon"></div>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Phones are permitted but keep them silent — no calls, no sounds. Snap your own moments, but never photograph others without consent. Let’s keep the space intentional and present.</p>
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <button class="faq-question">
+                            <span>How do I prepare?</span>
+                            <div class="faq-icon"></div>
+                        </button>
+                        <div class="faq-answer">
+                            <p>Skip heavy meals, hydrate well, and avoid oils, lotions, or perfumes to keep the water pure. Stay home if you’re unwell.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        
+        <section class="contact-sticky-container">
+            
+            <div class="contact-image-sticky">
+                </div>
+            
+            <div class="contact-scrollable-content">
+                <div class="contact-form-container">
+                    <form action="#" class="contact-form">
+                        <h1>Get In<br>Touch</h1>
+                        <p>Join our newsletter and stay up to date with ASAP.</p>
+                        <div class="form-row">
+                            <input type="text" name="firstName" placeholder="First name *">
+                            <input type="text" name="lastName" placeholder="Last name *">
+                        </div>
+                        <div class="form-row">
+                            <input type="email" name="email" placeholder="Email *">
+                            <input type="tel" name="phone" placeholder="Phone">
+                        </div>
+                        <textarea name="message" rows="5" placeholder="Message *"></textarea>
+                        <button type="submit" class="btn btn-submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>             
+   
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+            <img src="image/ASAP logo mark_blue.png" alt="ASAP Logo Mark">
+                </div>
+            <div class="footer-links">
+                <a href="#">EXPERIENCE</a>
+                <a href="#">PRICING</a>
+                <a href="#">FAQ</a>
+            </div>
+            <div class="footer-links">
+                <a href="#">PRIVACY POLICY</a>
+                <a href="#">TERMS OF USE</a>
+            </div>
+            <div class="footer-links">
+                <a href="#">STANLEY 11</br>CENTRAL</br>HONG KONG</a>
+                <div class="social-icons">
+                    <span></span><span></span><span></span>
                 </div>
             </div>
         </div>
-
-        <div class="section faq-section" id="faq">
-            <div class="section-line section-line--blue"></div>
-            <h2>FAQ</h2>
-            <div class="faq-item">
-                <button class="faq-question" data-expanded="false">
-                    <h4><span>01</span> When are you open?</h4>
-                </button>
-                <div class="faq-answer">
-                    <p>7am–10pm daily. Check our website for any changes. Some hours are reserved for quiet practice, others for social vibes.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question" data-expanded="false">
-                    <h4><span>02</span> Do I need to book?</h4>
-                </button>
-                <div class="faq-answer">
-                    <p>No booking required.Drop in and dive right into the experience.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question" data-expanded="false">
-                    <h4><span>03</span> What should I bring?</h4>
-                </button>
-                <div class="faq-answer">
-                    <p>Swimwear is a must. We provide towels, optional swim trunks (in case you're already on your way), and fluid replenishment. Bring an open mind.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question" data-expanded="false">
-                    <h4><span>04</span> Are phones or photos allowed?</h4>
-                </button>
-                <div class="faq-answer">
-                    <p>Phones are permitted but keep them silent — no calls, no sounds. Snap your own moments, but never photograph others without consent. Let’s keep the space intentional and present.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <button class="faq-question" data-expanded="false">
-                    <h4><span>05</span> How do I prepare?</h4>
-                </button>
-                <div class="faq-answer">
-                    <p>Skip heavy meals, hydrate well, and avoid oils, lotions, or perfumes to keep the water pure. Stay home if you’re unwell.</p>
-                </div>
-            </div>
+        <div class="footer-bottom">
+            <p>© 2025 ASAP HK. All rights reserved.</p>
         </div>
-
-        <div class="section section-4">
-            <h2>Coming</h2>
-            <div  class="text-logo-actual">
-                <svg alt="ASAP HK Logo" id="Layer_4" data-name="Layer 4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1354.19 331.82">
-                    <path class="cls-1" d="M330.9,144.19c-1.08-48.38-12.99-92.83-30.36-115.33l-.47-.63C284.11,8.76,264.99.37,244.26.26c0,0,0,0-.01,0-.98,0-1.96.02-2.94.05C172.73.88,94.59,84.3,55.4,143.77,28.52,184.64,4.84,229.77.64,270.92c-1.25,10.26-.62,19.61,1.56,27.8,3.43,17.71,13.6,31.25,34.17,32.31,1.52.07,3.07.04,4.64-.05,9.88.48,21.29-1.73,34.04-7.25,37.61-14.84,64.32-41.29,93.38-16.74,16.85,13.04,36.01,23.65,57.65,22.16,9.31.46,19.47-1.73,30.8-8.05,52.4-31.82,72.96-100.11,74.05-164.3,0-.04,0-.09,0-.13.06-3.41.06-6.8,0-10.18-.01-.77-.02-1.53-.04-2.3ZM208.45,170.43c-2.22,4.17-4.69,8.21-7.64,11.89-2.79,3.48-6.03,6.65-9.83,8.97-2.33,1.43-5.21,2.54-7.75,1.53-1.64-.65-2.85-2.13-3.5-3.76-1.27-3.23-.7-6.86-.04-10.15.67-3.38,1.67-6.68,2.92-9.89,2.52-6.47,6.05-12.52,10.09-18.16.61-.85,1.22-1.68,1.85-2.51,2.85-3.76,5.98-7.42,9.97-9.93,2.05-1.29,4.48-2.27,6.85-1.76,2.52.54,4.44,2.74,5.24,5.19.8,2.45.63,5.11.18,7.64-.98,5.47-3.23,10.63-5.64,15.63-.86,1.78-1.75,3.56-2.68,5.31Z"/>
-                    <path class="cls-1" d="M598.89,155.75c-11.58-13.13-27.18-20.52-1.81-29.11,26.5-9.74,66.44-18.52,86.84-43.87,19.9-30.67-4.77-55.53-36.9-69.83C624.46,3.53,598.14-.19,571.24,0h-1.11c-61.12-.71-161.69,34.12-169.05,107.61-4.43,39.88,59.91,75.31,75.34,92.38.41,1.86-1.23,2.1-3.74,2.5-22.08.72-49.19-1.53-73.48,2.63-73.25,12.92-74.17,84.4-26.71,108.58,53.94,29.91,152.57,22.49,219.11-28.47,61.83-50.3,45.56-95.01,7.3-129.5Z"/>
-                    <path class="cls-1" d="M982.3,144.96c-1.08-48.38-12.99-92.83-30.36-115.33l-.47-.63c-15.96-19.47-35.08-27.86-55.81-27.97,0,0,0,0-.01,0-.98,0-1.96.02-2.94.05-68.57.58-146.72,83.99-185.91,143.46-26.88,40.87-50.56,86-54.76,127.15-1.25,10.26-.62,19.61,1.56,27.8,3.43,17.71,13.6,31.25,34.17,32.31,1.52.07,3.07.04,4.64-.05,9.88.48,21.29-1.73,34.04-7.25,37.61-14.84,64.32-41.29,93.38-16.74,16.85,13.04,36.01,23.65,57.65,22.16,9.31.46,19.47-1.73,30.8-8.05,52.4-31.82,72.96-100.11,74.05-164.3,0-.04,0-.09,0-.13.06-3.41.06-6.8,0-10.18-.01-.77-.02-1.53-.04-2.3ZM859.68,171.1c-1.5,2.61-3.12,5.16-4.82,7.64-3.25,4.73-6.85,9.33-11.52,12.68-1.38.99-2.88,1.88-4.53,2.3-1.65.42-3.48.35-4.96-.51-6.01-3.46-2.98-13.95-1.43-18.99,2.29-7.44,6.1-14.32,10.38-20.78,3.53-5.31,7.51-10.5,12.82-14.03,2.57-1.71,5.97-2.98,8.66-1.46,2.03,1.15,2.98,3.58,3.33,5.89.58,3.85-.09,7.8-1.15,11.55-1.56,5.51-3.94,10.73-6.78,15.7Z"/>
-                    <path class="cls-1" d="M1343.67,40.03l-.39-.69c-21.87-41.59-86.13-45.79-140.94-32.71-123.49,25.72-213.64,176.29-196.62,269.17,4.61,33.91,38.97,73.16,85.33,46.88,20.85-11.43,32.49-32.01,49.72-45.58,15.71-12.67,35.72-13.31,54.44-15.5,14.48-1.53,29.66-5.31,43.91-11.75,83.22-37.47,139.43-147.37,104.55-209.82ZM1221.56,170.33c-1.52,2.65-3.17,5.23-4.89,7.74-3.24,4.7-6.83,9.26-11.47,12.59-1.36.97-2.82,1.85-4.44,2.28-1.62.43-3.41.38-4.88-.42-5.53-2.99-3.47-11.79-2.26-16.52,1.7-6.64,4.6-12.92,8.13-18.76,1.81-3,3.8-5.89,5.91-8.69,2.83-3.75,5.93-7.4,9.87-9.97,2.67-1.74,6.28-2.91,8.95-1.17,1.74,1.14,2.6,3.24,2.97,5.28.64,3.54.1,7.2-.79,10.69-1.52,5.96-4.03,11.6-7.09,16.96Z"/>
-                </svg>
-            </div>
-
-            <h2 class="address">11 Stanley Street,<br>Central, Hong Kong</h2>
-        </div>
-    </main>
-
-    <footer>
-        <p>©2025 ASAP HK. All rights reserved.</p>
     </footer>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
 
-            const header = document.querySelector('.header');
-            const pricingSection = document.getElementById('pricing');
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js"></script>
+    
+    <script src="script.js"></script>
 
-            function toggleHeaderColor() {
-                const scrollPosition = window.scrollY;
-
-                if (!pricingSection) return;
-
-                const top = pricingSection.offsetTop;
-                const bottom = top + pricingSection.offsetHeight;
-
-
-                if ((scrollPosition >= top - 100 && scrollPosition < bottom) || (scrollPosition >= 900 && scrollPosition < 1900)) {
-                  header.classList.add('dark-bg');
-              } else if (scrollPosition >= top - 100 && scrollPosition < bottom) {
-                header.classList.add('dark-bg');
-            } else {
-                header.classList.remove('dark-bg');
-            }
-        }
-
-        window.addEventListener('scroll', toggleHeaderColor);
-        toggleHeaderColor();
-
-        const faqButtons = document.querySelectorAll('.faq-question');
-        faqButtons.forEach(button => {
-            button.addEventListener('click', () => {
-                const expanded = button.getAttribute('data-expanded') === 'true';
-                const answer = button.nextElementSibling;
-
-                button.setAttribute('data-expanded', !expanded);
-                answer.setAttribute('data-expanded', !expanded);
-
-                if (answer.getAttribute('data-expanded') === 'true') {
-                    answer.style.maxHeight = answer.scrollHeight + 40 + "px";
-                } else {
-                    answer.style.maxHeight = "0";
-                }
-            });
-        });
-    });
-</script>
 </body>
-
 </html>
