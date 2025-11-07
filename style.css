@@ -451,7 +451,7 @@ main {
 }
 
 .contact-image-sticky {
-    background-image: url('image/ASAP high five.png');
+    background-image: url('images/ASAP%20high%20five.png');
     background-size: cover;
     background-position: center;
     height: 150vh;
@@ -679,3 +679,4 @@ main {
     }
 
 }
+
