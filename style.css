@@ -129,12 +129,12 @@ main {
 }
 
 .hero-bg-img.img-left {
-    background-image: url('image/ASAP left hero back.avif');
+    background-image: url('images/ASAP left hero back.avif');
     z-index: 4;
 }
 
 .hero-bg-img.img-right {
-    background-image: url('image/ASAP right hero goosebumps.avif');
+    background-image: url('images/ASAP right hero goosebumps.avif');
     position: relative;
     display: flex;
     align-items: top;
@@ -677,4 +677,5 @@ main {
     .faq-answer p {
         font-size: 1rem;
     }
+
 }
