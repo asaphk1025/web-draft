@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ASAP | Central's Alternate Sauna and Plunge</title>
+    <link rel="icon" type="image/png" href="favicon/favicon-16x16.png">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
@@ -11,27 +12,34 @@
 
     <header class="main-header">
         <div class="logo">
-            <img src="images/logo.png" alt="ASAP Logo">
+            <img src="image/logo.png" alt="ASAP Logo">
         </div>
         <nav>
             <ul>
-                <li><a href="#">EXPERIENCE</a></li>
-                <li><a href="#">PRICING</a></li>
-                <li><a href="#">COMMUNITY</a></li>
-                <li><a href="#">FAQ</a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#experience">EXPERIENCE</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="https://instagram.com/comeasaphk" target="_blank" class="nav-icon" aria-label="Instagram">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+                </a>
+                </li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <section class="hero-container">
+        <section class="hero-container" id="about">
             <div class="hero-pin">
                 
                 <div class="hero-background">
                     <div class="hero-bg-img img-left"></div>
                     <div class="hero-bg-img img-right">
                         <div class="logo-overlay">
-                            <img src="images/logo.png" alt="ASAP Logo Overlay">
+                            <img src="image/logo.png" alt="ASAP Logo Overlay">
                         </div>
                     </div>
                 </div>
@@ -39,17 +47,17 @@
                 <div class="hero-overlays">
                     <div class="hero-panel hero-blue">
                         <div class="hero-content">
-                            <h1>Central's</br>First Social</br>Sauna & Plunge</h1>
-                            <p>The first social sauna and plunge studio in Central, Hong Kong opening November 20.</p>
+                            <h1>Alternate Sauna</br>And Plunge</h1>
+                            <p>In the heart of Central</br>11 Stanley Street</br>Coming December</p>
                             <button class="btn btn-outline" onclick="document.location='https://forms.gle/RJnFu5X5kivxyRXQ9'">Get Early Access</button>
                         </div>
                     </div>
                     <div class="hero-panel hero-orange">
                         <div class="about-title">
-                            <h1>Nothing more,<br>Nothing less</h1>
+                            <h1>Nothing more<br>Nothing less</h1>
                         </div>
                         <div class="about-content">
-                            <div class="icon-placeholder"><img src="images/ASAP%20logo%20mark_blue.png" alt="ASAP Logo Mark"></div>
+                            <div class="icon-placeholder"><img src="image/ASAP logo mark_blue.png" alt="ASAP Logo Mark"></div>
                             <p>Just sauna and cold plunge.</p>
                             <p>Between our spacious sauna and individual cold plunges exists those who seek momentum, practice discipline, and inspire connections.</p>
                             <p>The science is clear: hot and cold immersion helps with clearer headspace, deeper sleep, faster recovery, and lower all-cause mortality.</p>
@@ -60,46 +68,110 @@
             </div>
         </section>
 
-        <section class="featured">
-            <h1>Come Once</h1>
-            <div class="product-slider">
+<section class="featured" id="experience">
+            <h1>Come Once, Come Often</h1>
+            
+            <div class="featured-grid">
+                
                 <div class="product-card">
-                    <h3>Ice Breaker Offer</h3>
-                    <p>Introductory offer for first time visitors. Drop in and try it for yourself.</p>
-                    <p>HK$240.00</p>
+                    <div class="product-image">
+                        <img src="image/ASAP left hero back.avif" alt="Ice Breaker"> 
+                    </div>
+                    <div class="product-info">
+                        <h3>Ice Breaker Offer</h3>
+                        <p>Introductory offer for first time visitors.</br></br>Drop in and try it for yourself.</p>
+                        <p class="price">HK$299.00</p>
+                        <a href="https://momence.com/m/567548" class="btn btn-outline-dark">Buy Now</a>
+                    </div>
                 </div>
+
                 <div class="product-card">
-                    <h3>Day Pass</h3>
-                    <p>Access the facilities with no time limit and no re-entry. Perfect for those with commitment issues. Towels provided.</p>
-                    <p>HK$280.00</p>
+                    <div class="product-image">
+                        <img src="image/ASAP left hero back.avif" alt="Day Pass">
+                    </div>
+                    <div class="product-info">
+                        <h3>Day Pass</h3>
+                        <p>Access the facilities with no time limit.</br></br>Perfect for commitment issues.</p>
+                        <p class="price">HK$360.00</p>
+                        <a href="https://momence.com/m/433886" class="btn btn-outline-dark">Buy Now</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="image/ASAP left hero back.avif" alt="Membership">
+                    </div>
+                    <div class="product-info">
+                        <h3>Membership</h3>
+                        <p>Priority access with bragging rights.</br></br>Enjoy exclusive rates every visit.</p>
+                        <p class="price">HK$520.00 / month</p>
+                        <a href="https://momence.com/m/567550" class="btn btn-outline-dark">Buy Now</a>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <div class="product-image">
+                        <img src="image/ASAP left hero back.avif" alt="The Big Dipper">
+                    </div>
+                    <div class="product-info">
+                        <h3>The Big Dipper</h3>
+                        <p>Unlimited sessions and priority access.</br></br>Exclusively for the dedicated.</p>
+                        <p class="price">By Invite Only</p>
+                       
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="immersion-carousel">
+            
+            <button class="nav-arrow prev-arrow" aria-label="Previous Slide">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+
+            <div class="carousel-slide intro-slide active">
+                <div class="intro-content">
+                    <img src="image/ASAP logo mark_blue.png" alt="ASAP Logo">
+                    <h1>Experience</h1>
                 </div>
             </div>
-            <h1>Come Often</h1>
-            <div class="product-slider">
-                <div class="product-card">
-                    <h3>Membership</h3>
-                   <p>Priority access with bragging rights. Enjoy exclusive Day Pass rate of $230 every visit.</p>
-                    <p>HK$520.00 per month</p>
-                </div>
-                <div class="product-card">
-                    <h3>The Big Dipper</h3>
-                    <p>Unlimited sessions and priority access. Exclusively for the dedicated.</p>
-                    <p>By invite only.</p>
-                </div>
+
+            <div class="carousel-slide portrait">
+                <img src="image/cold_plunge_experience.jpeg" alt="ASAP Cold Plunges Experience">
             </div>
+            <div class="carousel-slide portrait">
+                <img src="image/sauna_experience.jpeg" alt="ASAP Sauna Experience">
+            </div>
+            <div class="carousel-slide landscape">
+                <img src="image/13a.jpg" alt="ASAP Sneak Peak 1">
+            </div>
+            <div class="carousel-slide landscape">
+                <img src="image/13b.jpg" alt="ASAP Sneak Peak 2">
+            </div>
+            <div class="carousel-slide landscape">
+                <img src="image/13c.jpg" alt="ASAP Sneak Peak 3">
+            </div>
+            <div class="carousel-slide landscape">
+                <img src="image/13d.jpg" alt="ASAP Sneak Peak 4">
+            </div>
+            <div class="carousel-slide landscape">
+                <img src="image/13e.jpg" alt="ASAP Sneak Peak 5">
+            </div>
+            <div class="carousel-slide landscape">
+                <img src="image/13f.jpg" alt="ASAP Sneak Peak 6">
+            </div>
+            <button class="nav-arrow next-arrow" aria-label="Next Slide">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button>
 
         </section>
 
-        <section class="immersion">
-            <div class="immersion-content">
-                <div class="icon-placeholder-small"></div>
-                <h3>SPECIAL OFFER</h3>
-                <h1>Exclusive Immersion</h1>
-                <button class="btn btn-outline">Explore Now</button>
-            </div>
-        </section>
-
-        <section class="faq">
+        <section class="faq" id="faq">
             <div class="faq-content">
                 <div class="faq-title">
                     <h1>FAQ</h1>
@@ -122,7 +194,7 @@
                             <div class="faq-icon"></div>
                         </button>
                         <div class="faq-answer">
-                            <p>No booking required.Drop in and dive right into the experience.</p>
+                            <p>No booking required. Drop in and dive right into the experience.</p>
                         </div>
                     </div>
 
@@ -169,17 +241,10 @@
                 <div class="contact-form-container">
                     <form action="#" class="contact-form">
                         <h1>Get In<br>Touch</h1>
-                        <p>Join our newsletter and stay up to date with ASAP.</p>
-                        <div class="form-row">
-                            <input type="text" name="firstName" placeholder="First name *">
-                            <input type="text" name="lastName" placeholder="Last name *">
-                        </div>
-                        <div class="form-row">
-                            <input type="email" name="email" placeholder="Email *">
-                            <input type="tel" name="phone" placeholder="Phone">
-                        </div>
-                        <textarea name="message" rows="5" placeholder="Message *"></textarea>
-                        <button type="submit" class="btn btn-submit">Submit</button>
+                        <p>We open 7am till 10pm, seven days a week.</p>
+                        <p>11 Stanley Street</br>Central</br>Hong Kong</p>
+                        <p>Come ASAP.</p>
+                        <p>Or find us on Instagram:</br><a href="https://www.instagram.com/comeasaphk">@comeasaphk</a></p>
                     </form>
                 </div>
             </div>
@@ -189,22 +254,19 @@
     <footer class="main-footer">
         <div class="footer-content">
             <div class="footer-logo">
-            <img src="images/ASAP logo mark_blue.png" alt="ASAP Logo Mark">
+            <img src="image/ASAP logo mark_blue.png" alt="ASAP Logo Mark">
                 </div>
             <div class="footer-links">
-                <a href="#">EXPERIENCE</a>
-                <a href="#">PRICING</a>
-                <a href="#">FAQ</a>
+                <a href="#about">ABOUT</a>
+                <a href="#experience">EXPERIENCE</a>
+                <a href="#faq">FAQ</a>
             </div>
             <div class="footer-links">
                 <a href="#">PRIVACY POLICY</a>
                 <a href="#">TERMS OF USE</a>
             </div>
             <div class="footer-links">
-                <a href="#">STANLEY 11</br>CENTRAL</br>HONG KONG</a>
-                <div class="social-icons">
-                    <span></span><span></span><span></span>
-                </div>
+                <a href="https://maps.app.goo.gl/22HiZb45rkR891GdA" target="_blank" rel="noopener noreferrer">STANLEY 11</br>CENTRAL</br>HONG KONG</a>
             </div>
         </div>
         <div class="footer-bottom">
@@ -220,5 +282,3 @@
 
 </body>
 </html>
-
-
