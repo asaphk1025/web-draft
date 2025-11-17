@@ -21,25 +21,74 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // --- ANIMATIONS ---
     
-    ScrollTrigger.matchMedia({
+ScrollTrigger.matchMedia({
+        
+        // DESKTOP
         "(min-width: 769px)": function() {
-
-            // --- HERO STICKY ANIMATION ---
             const heroTL = gsap.timeline({
                 scrollTrigger: {
                     trigger: ".hero-container", 
-                    start: `top ${headerHeight}px`,     
-                    end: "+=200vh", 
+                    start: `top ${headerHeight}px`,      
+                    end: "+=200vh",
                     scrub: true,
-                    pin: ".hero-container", 
+                    pin: ".hero-container",
                     pinSpacing: true
                 }
             });
             heroTL.to(".about-title", { opacity: 0, duration: 0.1 }, 0.5);
             heroTL.to(".about-content", { opacity: 1, duration: 0.1 }, "<");
             heroTL.to(".hero-overlays", { yPercent: -50, duration: 1 }, 0); 
+        },
+
+        // MOBILE
+        "(max-width: 768px)": function() {
+            
+            const mobileTL = gsap.timeline({
+                scrollTrigger: {
+                    trigger: ".hero-panel.hero-orange",
+                    start: "top 20%", 
+                    end: "center center",  
+                    scrub: true
+                }
+            });
+            
+            mobileTL.to(".hero-orange .about-title", { opacity: 0, duration: 1 });
+            mobileTL.to(".hero-orange .about-content", { opacity: 1, duration: 1 }, "<");
         }
+
     });
+
+// --- IMMERSION CAROUSEL LOGIC (ARROWS) ---
+    const slides = document.querySelectorAll('.carousel-slide');
+    const nextBtn = document.querySelector('.next-arrow');
+    const prevBtn = document.querySelector('.prev-arrow');
+    
+    let currentSlide = 0;
+
+    function showSlide(index) {
+        // Hide all slides
+        slides.forEach(slide => slide.classList.remove('active'));
+        
+        // Show specific slide
+        slides[index].classList.add('active');
+    }
+
+    function nextSlide() {
+        currentSlide = (currentSlide + 1) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+        // Logic to go backwards correctly
+        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+        showSlide(currentSlide);
+    }
+
+    // Attach listeners
+    if (nextBtn && prevBtn) {
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+    }
 
     // --- FAQ ACCORDION LOGIC ---
     const allFaqItems = document.querySelectorAll('.faq-item');

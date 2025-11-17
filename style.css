@@ -19,12 +19,12 @@ body {
     background-color: var(--orange);
     color: var(--light-text);
     overflow-x: hidden;
-    font-size: 14px;
+    font-size: 18px;
 }
 
 h1 {
     font-family: 'Garamond', serif;
-    font-size: 50px;  /* Subtitle */
+    font-size: 72px;  /* Subtitle */
     font-weight: 400;
     line-height: 0.8;
     letter-spacing: -0.085em;
@@ -41,14 +41,14 @@ h2 {
 
 h3 {
     font-family: 'Inter', sans-serif;
-    font-size: 22px;  /* Heading 2 */
+    font-size: 33px;  /* Heading 2 */
     font-weight: 700;
     letter-spacing: -0.085em;
     line-height: 1.2; /* Readable default */
 }
 
 p {
-    font-size: 16px;  /* Body */
+    font-size: 18px;  /* Body */
     font-weight: 400;
     line-height: 1.6; /* Readable default */
     letter-spacing: -0.03em;
@@ -90,6 +90,29 @@ a:hover {
     padding: 0;
     display: flex;
     gap: 30px;
+    font-size: 16px;
+}
+
+.main-header nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+.nav-icon {
+    display: flex;
+    align-items: center;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.nav-icon svg {
+    display: block;
+    stroke: var(--light-text);
+}
+
+.nav-icon:hover {
+    opacity: 1;
+    text-decoration: none;
 }
 
 /* ----- MAIN CONTENT WRAPPER ----- */
@@ -129,12 +152,12 @@ main {
 }
 
 .hero-bg-img.img-left {
-    background-image: url('images/ASAP left hero back.avif');
+    background-image: url('image/ASAP left hero back.avif');
     z-index: 4;
 }
 
 .hero-bg-img.img-right {
-    background-image: url('images/ASAP right hero goosebumps.avif');
+    background-image: url('image/ASAP right hero goosebumps.avif');
     position: relative;
     display: flex;
     align-items: top;
@@ -258,87 +281,169 @@ main {
     text-align: center;
 }
 
-.product-slider {
+.featured-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 40px 0;
-    max-width: 50%;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 40px;
+    padding: 60px 0;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
 .product-card {
     text-align: left;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.product-image {
+    width: 85%; /* Adjust this percentage to make it smaller */
+    margin: 0 auto 20px auto; /* 'auto' on left/right centers the image */
+    aspect-ratio: 4 / 3; 
+    background-color: #e0e0e0; 
+    overflow: hidden;
     border-radius: 5px;
 }
 
-.product-image-box {
-    width: 100%;
-    height: 300px;
-    background-color: #f0f0f0;
-}
-
-.product-image-box img {
+.product-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
+}
+
+/* Text Styling */
+.product-info {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Ensures buttons align at the bottom if text lengths differ */
 }
 
 .product-card h3 {
-    font-size: 1.2rem;
-    padding: 20px 20px 10px;
-    margin: 0;
+    font-size: 1.4rem;
+    margin: 0 0 10px 0;
     color: var(--orange);
+    padding: 0;
 }
 
 .product-card p {
     font-size: 1rem;
-    padding: 0 20px 20px;
-    margin: 0;
+    margin: 0 0 15px 0;
+    padding: 0;
     color: var(--dark-text);
 }
 
-/* ----- VIDEO SECTION ----- */
-.immersion {
-    height: 80vh;
-    background-image: url('https://source.unsplash.com/random/1600x900?sauna');
-    background-size: cover;
-    background-position: center;
-    background-color: var(--dark-text);
-    background-blend-mode: overlay;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: var(--light-text);
+.product-card .price {
+    font-weight: 700;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
-.immersion-content {
+.product-card .btn {
+    align-self: flex-start; /* Aligns button to the left */
+    margin-top: auto; /* Pushes button to the bottom of the card */
+}
+
+/* Responsive: 2 Columns on Tablet */
+@media (max-width: 1100px) {
+    .featured-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Responsive: 1 Column on Mobile */
+@media (max-width: 600px) {
+    .featured-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* --- IMMERSION INTRO SLIDE --- */
+
+.intro-slide .intro-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 15px;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
 }
 
-.immersion h2 {
-    font-size: 2.5rem;
-    margin: 0;
+.intro-slide .intro-content img {
+    width: 65px;
+    height: auto;
+    display: block;
 }
 
-.icon-placeholder-small {
+/* ----- IMMERSION CAROUSEL ----- */
+.immersion-carousel {
+    height: 80vh; 
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--dark-text);
+}
+
+.carousel-slide {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%; 
+    height: 80%;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-slide.active {
+    opacity: 1;
+    z-index: 2;
+}
+
+.carousel-slide.landscape img { width: 100%; height: 100%; object-fit: cover; }
+.carousel-slide.portrait img { width: auto; height: 100%; max-width: 100%; object-fit: contain; }
+
+/* --- NAVIGATION ARROWS --- */
+.nav-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle circle border */
+    color: var(--light-text);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.nav-arrow:hover {
+    background-color: var(--light-text);
+    color: var(--orange);
+    border-color: var(--light-text);
+}
+
+.nav-arrow svg {
     width: 30px;
     height: 30px;
-    background-color: var(--orange);
 }
 
-.immersion .btn-outline {
-    border-color: var(--light-text);
-    color: var(--light-text);
+.prev-arrow {
+    left: 12.5%;
 }
 
-.immersion .btn-outline:hover {
-    background-color: var(--light-text);
-    color: var(--dark-text);
+.next-arrow {
+    right: 12.5%;
 }
 
 /* ----- FAQ SECTION ----- */
@@ -451,7 +556,7 @@ main {
 }
 
 .contact-image-sticky {
-    background-image: url('images/ASAP%20high%20five.png');
+    background-image: url('image/ASAP high five.png');
     background-size: cover;
     background-position: center;
     height: 150vh;
@@ -535,6 +640,7 @@ main {
     padding: 60px 40px 10px 40px;
     position: relative;
     z-index: 5;
+    font-size: 16px;
 }
 
 .footer-content {
@@ -615,7 +721,8 @@ main {
     }
 }
 
-@media (max-width: 768px) {
+/* ======== MOBILE HERO LAYOUT (ROBUST GRID PARALLAX) ======== */
+@media (max-width: 768px) {    
     h1 { font-size: 50px; }
     h2 { font-size: 32px; }
 
@@ -623,35 +730,107 @@ main {
         height: auto; 
         margin-top: 0;
     }
+
     .hero-pin {
         position: relative; 
         top: auto !important; 
         height: auto;
-    }
-    .hero-background, .hero-overlays {
-        height: 100vh;
-        position: relative;
-    }
-    .hero-background {
-        grid-template-columns: 1fr;
-    }
-    .hero-bg-img {
-        height: 50vh;
-    }
-    .hero-panel {
-        position: relative;
-        width: 100%;
-        height: auto;
-    }
-    .hero-orange {
-        bottom: auto; 
-        right: auto;
-    }
-    
-    .hero-orange .about-content {
-        opacity: 1;
+        
+        display: grid;
+        grid-template-columns: 100%;
+        grid-auto-rows: min-content;
+        
+        overflow: visible !important; 
     }
 
+    .hero-background, 
+    .hero-overlays {
+        display: contents;
+    }
+
+    .hero-bg-img,
+    .hero-panel {
+        width: 100%;
+        height: 80vh; 
+        
+        grid-column: 1;
+        
+        position: -webkit-sticky; 
+        position: sticky;
+        top: 0;
+        
+        left: auto;
+        right: auto;
+        bottom: auto;
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        object-fit: cover;
+    }
+    
+    .hero-bg-img.img-right {
+        order: 1;
+        z-index: 1;
+    }
+
+    .hero-panel.hero-blue {
+        order: 2;
+        z-index: 2;
+        background-color: var(--blue);
+        text-align: center;
+        padding: 40px;
+    }
+
+    .hero-bg-img.img-left {
+        order: 3;
+        z-index: 3;
+    }
+
+    .hero-panel.hero-orange {
+        order: 4;
+        z-index: 4;
+        background-color: var(--orange);
+        overflow: hidden;
+        text-align: center;
+        padding: 40px;
+    }
+
+    .logo-overlay {
+        width: 60%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        right: auto;
+        z-index: 5; 
+    }
+    
+    .hero-content {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .hero-orange .about-title,
+    .hero-orange .about-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        margin: 0;
+        transition: opacity 0.1s linear;
+    }
+
+    .hero-orange .about-title { opacity: 1; z-index: 12; }
+    .hero-orange .about-content { opacity: 0; z-index: 12; }
+
+    .faq-content, .contact-sticky-container, .footer-content { grid-template-columns: 1fr; }
+    .faq-title h2 { position: static; margin-bottom: 40px; }
+    .contact-image-sticky { position: relative; height: 50vh; }
+    .contact-scrollable-content { position: relative; top: auto; height: auto; }
+    .main-header { flex-direction: column; gap: 15px; padding: 15px; }
+    .form-row { flex-direction: column; gap: 20px; }
 }
 
 @media (max-width: 600px) {
@@ -677,6 +856,4 @@ main {
     .faq-answer p {
         font-size: 1rem;
     }
-
 }
-
